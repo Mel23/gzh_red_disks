@@ -7,7 +7,7 @@ from astroquery.vizier import Vizier
 from collections import OrderedDict
 import numpy as np
 
-def query(coords,catalog,cols,radius=2*u.arcsec,fill_val=-99.99,full=False):
+def query(coords,catalog,cols,radius=6*u.arcsec,fill_val=-99.99,full=False):
 
     results = Vizier.query_region(coords,catalog=catalog,radius=radius)
     if len(results) == 0:
@@ -51,7 +51,7 @@ def main():
     parser.add_argument('table',type=str,help='Input table')
     parser.add_argument('-fmt',default='fits',help='Specify table format for astropy (default = fits')
     #parser.add_argument('cat',type=str,help='Catalog name on vizier')
-    parser.add_argument('-rad',type=float,default=2,help='Search radius in arcsec (default = 2)')
+    parser.add_argument('-rad',type=float,default=6,help='Search radius in arcsec (default = 6)')
     parser.add_argument('-o',type=str,help='If specified, output table')
 
     args = parser.parse_args()
