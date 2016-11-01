@@ -23,11 +23,11 @@ The only change came from Edmond who altered the original script in the followin
 
 ;the output image is in counts/sec, and so is the sky image
 
-   IF NOT keyword_set(nonoise) THEN $
+IF NOT keyword_set(nonoise) THEN $
    
-    out += sky[0:sz_out[0]-1, 0:sz_out[1]-1]+ $
-    
-           sqrt(abs(out*exptime))*randomn(1, sz_out[0], sz_out[1])/exptime
+out += sky[0:sz_out[0]-1, 0:sz_out[1]-1]+ $
+   
+sqrt(abs(out*exptime))*randomn(1, sz_out[0], sz_out[1])/exptime
            
    return, out
    
@@ -37,7 +37,7 @@ END
 
 out += poidev(sky[0:sz_out[0]-1, 0:sz_out[1]-1]*exptime)/exptime +$
 
-             poidev(out*exptime)/exptime
+poidev(out*exptime)/exptime
 
 
 ### make_jpeg.pro
