@@ -22,15 +22,21 @@ The only change came from Edmond who altered the original script in the followin
 *The only thing (I think) that I changed in the FERENGI code is the addition of poisson noise to the artificially redshifted images (instead of a assuming a normal distribution). So there is this function called "ferengi_convolve_plus_noise" within the ferengi.pro file, and the last lines are:*
 
 ;the output image is in counts/sec, and so is the sky image
+
    IF NOT keyword_set(nonoise) THEN $
+   
     out += sky[0:sz_out[0]-1, 0:sz_out[1]-1]+ $
+    
            sqrt(abs(out*exptime))*randomn(1, sz_out[0], sz_out[1])/exptime
+           
    return, out
+   
 END
 
 *I replaced the line that starts with "out+=" with this:*
 
 out += poidev(sky[0:sz_out[0]-1, 0:sz_out[1]-1]*exptime)/exptime +$
+
              poidev(out*exptime)/exptime
 
 
