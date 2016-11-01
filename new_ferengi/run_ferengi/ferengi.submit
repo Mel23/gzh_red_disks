@@ -1,0 +1,6 @@
+universe = vanilla
+nice_user = True
+Requirements = machine != "lucifer3.spa.umn.edu"
+request_memory = max({300, Target.TotalSlotMemory})
+Rank = Memory
+queue
