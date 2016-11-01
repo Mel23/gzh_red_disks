@@ -19,7 +19,7 @@ This is almost 100% identical to the original ferengi code which can be download
 
 The only change came from Edmond who altered the original script in the following way: (copy/paste from an e-mail):
 
-The only thing (I think) that I changed in the FERENGI code is the addition of poisson noise to the artificially redshifted images (instead of a assuming a normal distribution). So there is this function called "ferengi_convolve_plus_noise" within the ferengi.pro file, and the last lines are: 
+*The only thing (I think) that I changed in the FERENGI code is the addition of poisson noise to the artificially redshifted images (instead of a assuming a normal distribution). So there is this function called "ferengi_convolve_plus_noise" within the ferengi.pro file, and the last lines are: *
 
 ;the output image is in counts/sec, and so is the sky image
    IF NOT keyword_set(nonoise) THEN $
@@ -28,11 +28,11 @@ The only thing (I think) that I changed in the FERENGI code is the addition of p
    return, out
 END
 
-I replaced the line that starts with "out+=" with this: 
+*I replaced the line that starts with "out+=" with this: *
 
 out += poidev(sky[0:sz_out[0]-1, 0:sz_out[1]-1]*exptime)/exptime +$
              poidev(out*exptime)/exptime
-"
+
 
 ### make_jpeg.pro
 Ferengi (as I ran it) outputs AEGIS equivalent I and V band fits files. make_jpeg uses those as input to output an RGB image. 
