@@ -1,4 +1,4 @@
-## Documentation for how I (Mel G) created a second sample of Ferengi images to put into Galaxy Zoo in 2016. This sample was created as close as possible to the original set classified in GZ in 2013. 
+## Documentation for how Mel G created a second sample of Ferengi images to put into Galaxy Zoo in 2016. This sample was created as close as possible to the original set classified in GZ in 2013. 
 
 Assuming you have a set of galaxies you want to ferengify, you'll need to start with their positions (ra/dec) OR their SDSS field, camcol, run, and rerun info. Relevant data needed later will include redshift and some radius for determining the size of your cutouts (I used petrorad_r90_r for mine.) 
 
