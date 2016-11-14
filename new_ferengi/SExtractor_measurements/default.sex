@@ -1,0 +1,88 @@
+#Default paramaters for I-band Ferengi images in the AEGIS field
+
+#-------------------------------- Catalog ------------------------------------
+ 
+CATALOG_NAME     test.cat       # name of the output catalog
+CATALOG_TYPE     ASCII_HEAD     # "NONE","ASCII_HEAD","ASCII","FITS_1.0"
+                                # "FITS_LDAC" or "FITS_TPX"
+ 
+PARAMETERS_NAME  default.param  # name of the file containing catalog contents
+ 
+#------------------------------- Extraction ----------------------------------
+ 
+DETECT_TYPE      CCD            # "CCD" or "PHOTO"
+DETECT_MINAREA   50             # minimum number of pixels above threshold
+DETECT_THRESH    2.5            # <sigmas> or <threshold>,<ZP> in mag.arcsec-2
+ANALYSIS_THRESH  2.5            # <sigmas> or <threshold>,<ZP> in mag.arcsec-2
+THRESH_TYPE	 RELATIVE	# determines what is used can be ABSOLUTE or RELATIVE
+ 
+FILTER           Y              # apply filter for detection ("Y" or "N")?
+FILTER_NAME      default.conv   # name of the file containing the filter
+ 
+DEBLEND_NTHRESH  32             # Number of deblending sub-thresholds
+DEBLEND_MINCONT  0.1            # Minimum contrast parameter for deblending
+ 
+CLEAN            Y              # Clean spurious detections? (Y or N)?
+CLEAN_PARAM      1.0            # Cleaning efficiency
+ 
+MASK_TYPE        CORRECT        # type of detection MASKing: can be one of
+                                # "NONE", "BLANK" or "CORRECT"
+ 
+#------------------------------ Photometry -----------------------------------
+ 
+# Auto flux radii parameters
+
+PHOT_FLUXFRAC	 0.5, 0.9	# Fraction of FLUX AUTO defining each element of FLUX RADIUS vector
+
+# MAG_AUTO parameters
+
+PHOT_AUTOPARAMS  1.5, 1.5       # MAG_AUTO parameters: <Kron_fact>,<min_radius>
+PHOT_AUTOAPERS	 0.0,0.0	# Minimum circular aperture diameters: estimation disk and minimum disk	
+
+# Aperture parameters
+
+PHOT_APERTURES   5, 10, 20      # MAG_APER aperture diameter(s) in pixels
+
+# Petrosian parameters
+
+PHOT_PETROPARAMS 1.0, 1.0       # MAG_PETRO parameters: <Petrosian_fact>, <min_radius>
+
+SATUR_LEVEL      50000.0        # level (in ADUs) at which arises saturation
+ 
+MAG_ZEROPOINT    26.485         # magnitude zero-point  #f814=25.935 in 2007   #f606=26.485 in 2007
+MAG_GAMMA        4.0            # gamma of emulsion (for photographic scans)
+GAIN             2.0            # detector gain in e-/ADU
+PIXEL_SCALE      0.03           # size of pixel in arcsec (0=use FITS WCS info)
+ 
+#------------------------- Star/Galaxy Separation ----------------------------
+ 
+SEEING_FWHM      0.1           # stellar FWHM in arcsec
+STARNNW_NAME     default.nnw    # Neural-Network_Weight table filename
+ 
+#------------------------------ Background -----------------------------------
+ 
+BACK_SIZE        64             # Background mesh: <size> or <width>,<height>		#Default 64
+BACK_FILTERSIZE  3              # Background filter: <size> or <width>,<height>		#Default 3
+ 
+BACKPHOTO_TYPE   GLOBAL         # can be "GLOBAL" or "LOCAL"
+
+WEIGHT_TYPE	 BACKGROUND	# weighting scheme can be NONE, BACKGROUND, MAP_RMS, MAP_VAR, MAP_WEIGHT  
+
+#------------------------------ Check Image ----------------------------------
+ 
+CHECKIMAGE_TYPE  OBJECTS, APERTURES, -OBJECTS          # can be one of "NONE", "BACKGROUND",
+                                # "MINIBACKGROUND", "-BACKGROUND", "OBJECTS",
+                                # "-OBJECTS", "SEGMENTATION", "APERTURES",
+                                # or "FILTERED"
+
+CHECKIMAGE_NAME  check_f606/test.jpeg, apertures_f606/test.jpeg, residual_f606/test.jpeg    # Filename for the check-image
+ 
+#--------------------- Memory (change with caution!) -------------------------
+ 
+MEMORY_OBJSTACK  3000           # number of objects in stack
+MEMORY_PIXSTACK  300000         # number of pixels in stack
+MEMORY_BUFSIZE   1024           # number of lines in buffer
+ 
+#----------------------------- Miscellaneous ---------------------------------
+ 
+VERBOSE_TYPE     NORMAL         # can be "QUIET", "NORMAL" or "FULL"
