@@ -1,4 +1,4 @@
-pro ferengify_1, q
+pro ferengify, q,s
 
 path = '/data/lucifer1.1/users/galloway/new_ferengi/'
 
@@ -10,7 +10,7 @@ fits_read,'sky.fit',sky
 fits_read,'aegis_psfi.fits',aegis_psfi
 aegis_psfi=aegis_psfi/total(aegis_psfi)
  
-fits_read,'aegis_psfv.fits',aegis_psfv
+fits_read,'aegis_psf_v.fits',aegis_psfv
 aegis_psfv=aegis_psfv/total(aegis_psfv)
 
 ; path to galaxy files:
@@ -26,7 +26,7 @@ out_path = path+ 'output/'
 
 
     ;this galaxy's objid, row, col, redshift:
-a=mrdfits(path+'input/remaining_ferengi_subjects.fits',1,row=[q]) 
+a=mrdfits(path+'input/ferengi_candidates_stage_2_939.fits',1,row=[q]) 
 objid=a.dr12objid 
 row=a.rowc_r
 col=a.colc_r 
@@ -57,6 +57,27 @@ delvar, u,imuerr,g,imgerr,r,imrerr,i,imierr,z,imzerr
   ;  imerr = sqrt(abs(im)) & $
 
 psf_filename=psf_path+strtrim(objid,1)+'_psf.fits' 
+
+;psfu = mrdfits(psf_filename,1) & $
+
+;u=sdss_psfrec(psfu,row,col) & $
+;u=u/total(u) & $
+
+;psfg = mrdfits(psf_filename,2) & $
+;g=sdss_psfrec(psfg,row,col) & $
+;g=g/total(g) & $
+
+;psfr = mrdfits(psf_filename,3) & $
+;r=sdss_psfrec(psfr,row,col) & $
+;r=r/total(r) & $
+
+;psfi = mrdfits(psf_filename,4) & $
+;i=sdss_psfrec(psfi,row,col) & $
+;i=i/total(i) & $
+
+;psfz = mrdfits(psf_filename,5) & $
+;z=sdss_psfrec(psfz,row,col) & $
+;z=z/total(z) & $
 
 ;find smallest psf
 psfinfo = mrdfits(psf_filename,6) 
@@ -92,7 +113,7 @@ delvar, p  ; remove psf component variable
 
 ; Ferengify from z=0.3 to 1
 evo = 1 
-FOR k=3,10 DO BEGIN 
+FOR k=s,s DO BEGIN 
     simz=strtrim(k,1) 
     evo_str=strtrim(evo,1) 
 
@@ -106,7 +127,7 @@ FOR k=3,10 DO BEGIN
     ferengi, sky, im, imerr, psflo, [.05,.02,.02,.02,.03],aegis_psfi, [3561.,4718,6185,7501,8962],    ['sdss_u0.par','sdss_g0.par','sdss_r0.par','sdss_i0.par','sdss_z0.par'],z_lo,.396,zeropoints,sdss_exposure_times,8140.,'clash_acs_f814w.par',k/10.,.03,25.937,2100.,i_file,i_psf_file,evo=-1*evo 
 
 ;V band
-    ferengi, sky, im, imerr, psflo, [.05,.02,.02,.02,.03],aegis_psfv, [3561.,4718,6185,7501,8962],    ['sdss_u0.par','sdss_g0.par','sdss_r0.par','sdss_i0.par','sdss_z0.par'],z_lo,.396,zeropoints,sdss_exposure_times,6060.,'clash_acs_f606w.par',k/10.,.03,26.486,22600.,v_file,v_psf_file,evo=-1*evo 
+    ferengi, sky, im, imerr, psflo, [.05,.02,.02,.02,.03],aegis_psfv, [3561.,4718,6185,7501,8962],    ['sdss_u0.par','sdss_g0.par','sdss_r0.par','sdss_i0.par','sdss_z0.par'],z_lo,.396,zeropoints,sdss_exposure_times,6060.,'clash_acs_f606w.par',k/10.,.03,26.486,2260.,v_file,v_psf_file,evo=-1*evo 
 
 ;make images
 
