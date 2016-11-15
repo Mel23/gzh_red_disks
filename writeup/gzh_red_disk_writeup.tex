@@ -19,17 +19,17 @@
 \voffset-1.25cm
 \begin{document}
 
-\title[Galaxy~Zoo: passive disk fraction]{Galaxy~Zoo~Hubble: the passive disk fraction decreases from $z=1.0$ to $z=0.3$. \emph(working title)}
-\author[Galloway et~al.]{\parbox[t]{16cm}{Melanie A. Galloway$^1$, Kyle W. Willett$^1$,several others
+\title[Galaxy~Zoo: passive disk fraction]{Galaxy~Zoo~Hubble: the passive disk fraction decreases from $z=1.0$ to $z=0.3$ or maybe increases who even knows}
+\author[Galloway et~al.]{\parbox[t]{16cm}{Melanie A. Galloway$^1$,several others
 \vspace{0.1in} }\\
 $^{1}$School of Physics and Astronomy, University of Minnesota, 116 Church St. SE, Minneapolis, MN 55455, USA\\
-$^{2}$Wheelock College, Department of Science, Wheelock College, Boston, MA 02215, USA\\
-$^{3}$Institute for Astronomy, Department of Physics, ETH Z\"urich, Wolfgang-Pauli-Strasse 16, CH-8093, Z\"urich, Switzerland\\
-$^{4}$Department of Astronomy and Astrophysics, 1156 High Street, University of California, Santa Cruz, CA 95064, USA\\
-$^{5}$Kavli IPMU (WPI), The University of Tokyo, Kashiwa, Chiba 277-8583, Japan\\
-$^{6}$Oxford Astrophysics, Denys Wilkinson Building, Keble Road, Oxford OX1 3RH, UK\\
-$^{7}$Institute of Cosmology \& Gravitation, University of Portsmouth, Dennis Sciama Building, Portsmouth PO1 3FX, UK\\
-$^{8}$SEPnet --- \url{http://www.sepnet.ac.uk} \\
+%$^{2}$Wheelock College, Department of Science, Wheelock College, Boston, MA 02215, USA\\
+%$^{3}$Institute for Astronomy, Department of Physics, ETH Z\"urich, Wolfgang-Pauli-Strasse 16, CH-8093, Z\"urich, Switzerland\\
+%$^{4}$Department of Astronomy and Astrophysics, 1156 High Street, University of California, Santa Cruz, CA 95064, USA\\
+%$^{5}$Kavli IPMU (WPI), The University of Tokyo, Kashiwa, Chiba 277-8583, Japan\\
+%$^{6}$Oxford Astrophysics, Denys Wilkinson Building, Keble Road, Oxford OX1 3RH, UK\\
+%$^{7}$Institute of Cosmology \& Gravitation, University of Portsmouth, Dennis Sciama Building, Portsmouth PO1 3FX, UK\\
+%$^{8}$SEPnet --- \url{http://www.sepnet.ac.uk} \\
    }
 \maketitle
 
@@ -41,10 +41,37 @@ $^{8}$SEPnet --- \url{http://www.sepnet.ac.uk} \\
 \section{Introduction}
 \label{sec:Intro}
 
-\section{Data and sample selection}
-\label{sec:Sample Selection}
+\begin{itemize}
+\item main idea: spiral/disk galaxies tend to show ongoing star formation, elliptical/spheroidal galaxies tend to exhibit little to no star formation. Relative numbers of populations are not constant over time - blue cloud : red sequence decreases as Universe evolves, suggesting a morphological evolution of galaxies coupled with quenching of star formation.
 
+\item driver of evolution (morphologically and in SFR) is not known; also not known to what degree the morphological and quenching transformations are linked, or which occurs first
 
+\item significant population of red sequence disks could represent major stage in transformation, for some or all galaxies
+ 
+\end{itemize}
+
+\section{Data}
+\label{sec:Data}
+
+The parent sample of galaxies in this paper is drawn from the Galaxy Zoo: Hubble (GZH) catalog (cite Willett et al. 2016), which provides morphological classifications for galaxies sourced from the HST Legacy Surveys. From the main catalog we select galaxies with imaging from the Cosmic Evolution Survey (COSMOS, \citet{Scoville2007}) in the redshift range $0<z<1$. From this, we apply a magnitude cut of $M_{r^{+}}<-20.5$ to create a volume-limited sample (see Figure~\ref{fig:volume_lim}). Rest frame NUV-r and r-J colors are taken from the UltraVISTA catalog \citep{McCracken2012,Ilbert2013}.
+
+\subsection{Selecting passive disk galaxies}
+We identify a sample of non-clumpy disk galaxies using the morphological classifications provided by GZH. The sample includes subjects which meet the following criteria: $\rm f_{features} > 0.23$ and $\rm f_{clumpy,no} > 0.30$, where $\rm f$ is the debiased vote fraction. We also require at least 20 votes for each question ($\rm N_{smooth~or~features} \ge 20$ and $\rm N_{clumpy} \ge 20$) to reduce uncertainty in the vote fractions. 
+
+% Figure - mag vs. z (needed??? questionable. useful? also questionable. ) 
+\begin{figure}
+\centering
+\includegraphics[width=0.45\textwidth]{figures/mag_z_limit.pdf}
+\caption{70,198 COSMOS galaxies cross-matched in GZH and UltraVISTA (black). 27,584 are in volume-limited sample (red).}
+\label{fig:volume_lim}
+\end{figure}   
+
+\section{Ferengi}
+\begin{itemize}
+\item ~1300ish galaxies, r mags from SDSS \citep{Abazajian2009}
+\item NUV mags from GaLEX \citep{Martin2005}
+\item J mags from 2Mass \citep{Skrutskie2006}
+\end{itemize}
 \section{Results}
 \label{sec:Results}
 
@@ -60,26 +87,38 @@ $^{8}$SEPnet --- \url{http://www.sepnet.ac.uk} \\
 %%%%%%%%%%%%
 %%% ACKNOWLEDGMENTS
 %%%%%%%%%%%%
-
-\section*{Acknowledgments}
 The data in this paper are the result of the efforts of the Galaxy~Zoo~Hubble volunteers, without whom none of this work would be possible. Their efforts are individually acknowledged at \url{authors.galaxyzoo.org}. Please contact the author(s) to request access to research materials discussed in this paper. 
 
 
-Since I'm from physics I've never taken Astro 101, but for those of you who did I believe you would have learned about this color magnitude diagram. You probably learned that when you plot a bunch of galaxies in this way, you get two distinct populations: in the bottom half of the diagram are the very blue galaxies, we call this the 'blue cloud.' When you look at the morphologies of the blue cloud, you find that almost all of them are spirals, or have disk structure. On the top you get the redder galaxies, we call this region the red sequence. The vast majority of these are ellipticals. 
+MG, CS, MB, and LF gratefully acknowledge support from the US National
+Science Foundation Grant AST1413610.
 
-You probably also learned in astro 101 that the color of a galaxy is an indicator of its age: blue light tends to come from young, hot stars, or from star-forming regions, while red light comes from old, cooler stars. This relationship between color and morphology, or similarly age and morphology, seems to imply some sort of morphological transformation as a galaxy ages - so we tend to believe that galaxies form as disks and then transform into ellipticals either soon after or before, or while the stars die.
+This publication makes use of data products from the Two Micron All Sky Survey, which is a joint project of the University of Massachusetts and the Infrared Processing and Analysis Center/California Institute of Technology, funded by the National Aeronautics and Space Administration and the National Science Foundation.
 
-So we have this model in which disks seem to transition into ellipticals around the same time as they stop forming stars, but this diagram doesn't tell us much about that process. Is it immediate - Does quenching happen for the same reason as the morphological tranformation? If not, does one happen before the other, and if so, which, and how? 
+This project made heavy use of the Astropy packages in Python \citep{Robitaille2013}, the \texttt{seaborn} plotting package \citep{Waskom}, and the Tool for OPerations on Catalogues And Tables (TOPCAT), which can be found at \url{www.starlink.ac.uk/topcat/} \citep{topcat2011}. 
 
-The way we can approach this possible intermediate phase in a galaxy's evolution is to study the red disks - the fact that they exist at all seems to imply that the morphological transformation is (at least not always) in sync with SF quenching; if it were, then we would *only* see BD and RE. Since there do exist small populations of RD and BEs, it is possible that they represent short stages within this larger evolutionary pathway. 
+Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan
+Foundation, the Participating Institutions, the National Science Foundation,
+the U.S. Department of Energy, the National Aeronautics and Space
+Administration, the Japanese Monbukagakusho, the Max Planck Society, and the
+Higher Education Funding Council for England. The SDSS website is
+\url{http://www.sdss.org/}. 
 
-So what I'm going to talk to you about today is my research on these red disk galaxies, and how their population (in terms of fraction) changes over time (specifically between redshift 0.3 and 1.0), and how I'm going to try to argue how the fact that it changes at all, and whether it increases or decreases reveals details on the likely phases a typical galaxy goes through in its lifetime. But first I'm going to give some detail on the data set and how I selected these galaxies. 
-
-This research made extensive use of the Tool for OPerations on Catalogues And Tables (TOPCAT), which can be found at \url{www.starlink.ac.uk/topcat/} \citep{tay05}. 
-
-
+The SDSS is managed by the Astrophysical Research Consortium for the
+Participating Institutions. The Participating Institutions are the American
+Museum of Natural History, Astrophysical Institute Potsdam, University of
+Basel, University of Cambridge, Case Western Reserve University, University of
+Chicago, Drexel University, Fermilab, the Institute for Advanced Study, the
+Japan Participation Group, Johns Hopkins University, the Joint Institute for
+Nuclear Astrophysics, the Kavli Institute for Particle Astrophysics and
+Cosmology, the Korean Scientist Group, the Chinese Academy of Sciences
+(LAMOST), Los Alamos National Laboratory, the Max-Planck-Institute for
+Astronomy (MPIA), the Max-Planck-Institute for Astrophysics (MPA), New Mexico
+State University, Ohio State University, University of Pittsburgh, University
+of Portsmouth, Princeton University, the United States Naval Observatory and
+the University of Washington. 
 
 \bibliographystyle{mn2e}
-\bibliography{melrefs}  
+\bibliography{/home/mel/Documents/Papers/library}  
 
 \end{document}
