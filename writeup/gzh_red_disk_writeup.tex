@@ -21,7 +21,7 @@
 \begin{document}
 
 \title[Galaxy~Zoo: passive disk fraction]{Galaxy~Zoo~Hubble: the passive disk fraction decreases from $z=1.0$ to $z=0.3$ or maybe increases who even knows}
-\author[Galloway et~al.]{\parbox[t]{16cm}{Melanie A. Galloway$^1$,several others
+\author[Galloway et~al.]{\parbox[t]{16cm}{Melanie A. Galloway$^1$, several others
 \vspace{0.1in} }\\
 $^{1}$School of Physics and Astronomy, University of Minnesota, 116 Church St. SE, Minneapolis, MN 55455, USA\\
 %$^{2}$Wheelock College, Department of Science, Wheelock College, Boston, MA 02215, USA\\
@@ -35,7 +35,7 @@ $^{1}$School of Physics and Astronomy, University of Minnesota, 116 Church St. S
 \maketitle
 
 \begin{abstract}
-
+We study the evolution of the passive disk population from $z=1$ to $z=0.3$ in a sample of 27,000 galaxies from the COSMOS field and morphologically classified by the Galaxy Zoo: Hubble project. We find the fraction of disks occupying the red sequence, as well as the fraction of disk galaxies that are red, to decrease for the most massive galaxies ($\rm log(M/M_{\odot})>11$) but increase for lower masses. We interpret the trends in these fractions by identifying four dominant drivers of the change in numbers for each population: the rate of blue disks quenching to become red disks, the rate of red disks transforming to red ellipticals, the rate of blue disks quenching while morphologically transforming to red ellipticals, and the net elliptical merger rate. We develop a toy model to simulate the evolution of the passive disk fractions using a range of input rate parameters. Using the best-fit results of the model, we estimate that 30 +-error \% of massive galaxies go through a passive disk phase, and this fraction decreases with mass. This paper also introduces a new method for using artificially-redshifted galaxies to quantify the redshift-bias in Galaxy Zoo classifications in order to accuratly measure the fraction of disk galaxies as a function of redshift.  
 
 \end{abstract}
 
@@ -44,12 +44,19 @@ $^{1}$School of Physics and Astronomy, University of Minnesota, 116 Church St. S
 
 Passive, red disks are an unconventional class of galaxies. They do not adhere to the standard bimodality of the color-morphology relationship, whereby most galaxies tend to exist in one of two populations: blue, late-type disks exhibiting active star formation, and red, early-type ellipticals showing little to no signs of recent star formation \citep{Strateva2001, Baldry2004, Correa2017}. The division between the two populations is particularly apparent when represented visually on a color-magnitude or color color diagram. Galaxies tend to populate in two distinct regions: the ``red sequence'' in the upper band, which contains predominantly early-type galaxies, and the ``blue cloud'' in the lower, containing mostly late-type spirals. This relationship has been shown to hold for $\sim >$ 85\% of galaxies out to z $\sim$ 1 \citep{Bell2004,Cirasuolo2007,Mignoli2009} and possibly beyond \citep{Giallongo2005, vanDokkum2006, Franzetti2007, Cassata2008}. 
 
-The relatively tight correlation between galaxy color (which traces the stellar content), and morphology (which traces dynamical history), suggests an evolutionary link between the two. In the simplest interpretation, it could be deduced that galaxies tend to begin their lives as young, star-forming disks, until some mechanism (secular or external) causes star-formation to cease while the galaxy simultaneously undergoes a morphological transformation from disk to spheroidal. The growing evidence for a significant population of galaxies which breaks this relationship, however, insists on more nuanced interpretations of this model. 
+The relatively tight correlation between galaxy color (which traces the stellar content) and morphology (which traces dynamical history) suggests an evolutionary link between the two. In the simplest interpretation, it could be deduced that galaxies tend to begin their lives as young, star-forming disks, until some mechanism (secular or external) causes star-formation to cease while the galaxy simultaneously undergoes a morphological transformation from disk to spheroidal. The growing evidence for a significant population of galaxies which breaks this relationship, however, insists on more nuanced interpretations of this model. 
 
-The passive disk population has been a matter of interest for understanding the mechanisms driving the evolutionary link between color and morphology since their initial discovery.  In one of the earliest documented reports of this class, \citet{VandenBergh1976} identified a set of spirals in the Virgo cluster which were forming stars ``much less vigorously'' than the other galaxies of the same type, which were dubbed ``anemic spirals''. Analysis of this population suggested the possibility of ``gentle'' quenching mechanisms which could shut off star-formation without disrupting the morphology (in contrast to violent processes such as mergers, which are known to destroy the disk (citations)). The low gas content in the anemic spirals suggested that subtle environmental factors played a role in stripping the gas required to continue star-formation, a process commonly known now as ram-pressure stripping \citep{Gunn1972,Steinhauser2016}.  
+The passive disk population has been a matter of interest for understanding the mechanisms driving the evolutionary link between color and morphology since their initial discovery.  In one of the earliest documented reports of this class, \citet{VandenBergh1976} identified a set of spirals in the Virgo cluster which were forming stars ``much less vigorously'' than the other galaxies of the same type, which were dubbed ``anemic spirals''. Analysis of this population suggested the possibility of ``gentle'' quenching mechanisms which could shut off star-formation without disrupting the morphology (in contrast to violent processes such as mergers, which are known to destroy the disk (citations)). The low gas content in the anemic spirals suggested that subtle environmental factors played a role in stripping the gas required to continue star-formation, a process commonly known now as ram-pressure stripping \citep{Gunn1972,Steinhauser2016}. 
 
+Other studies have since investigated other possible mechanisms could lead to the formation of passive disks, and how significant of a contribution this population makes to understanding the full picture of galaxy evolution. Environment is believed to play a strong role in thier formation; many studies for instance find passive spirals preferentially in high-density environments \citep{Dressler1999, Poggianti1999, Goto2003, Deng2009, Hughes2009}. \citet{Moran2006} model the star-formation histories of passive spirals at $z\sim0.4$ and find them to be consisted with models for spirals affected by gas-starvation \citep{Larson1980, Quilis2000, Bekki2002}. Environment plays a significant factor in this scenerio, wherby the interaction of the galaxy with the intra-cluster medium halts the accretion of gas onto the galaxy, inhibiting star-formation and causing a quench without disrupting the morphology significantly. Their results did not argue that starvation was the only mechanism responsible for building up the population of disks in the red sequence, but do conclude that passive disks are indeed an important transition population.
 
+\citet{Masters2010} is one of the few studies which finds no strong correlation of passive disks with environment, but do not rule out environment playing a significant contribution in their creation. They also find strong evidence for quenching via completely secular processes; given by their sample of passive disks being more massive and having a higher bar fraction than their star-forming counterparts. Massive galaxies are more likely to have been assembling for very long times, allowing sufficient time to use up all of their gas, without environment being a direct factor. This option could explain the observed correlations with density and passivity, given that higher-density regions were more likely to have been assembled at earlier times. Secondly, \citet{Masters2010} observed a significantly higher bar fraction in passive spirals (67\%) than star-forming spirals (27\%). Bars are known for their ability to efficiently drive gas to the centers of galaxies via a redistribution of angular momentum throughout the disk (citations), which could increase central star-formation (citations) or feed the central supermassive black hole (citations). The excess of bars in passive disks then suggests that bars were responsible for quickly using up the gas in the galaxy, resulting in subsequent quenching. 
 
+Passive disks have thus far been proposed as both a final stage of galactic evolution, driven by secular and external processes capable of exhausting gas required for star-formation, and as a transition phase of galaxies toward a final evolution to red spheroidal, driven by processes which quench and morphologically transform on different timescales, or multiple separate processes acting independently. Understanding the significance of the passive disk population is therefore unquestionably an important key to understanding galaxy evolution as a whole. \citet{Bundy2010} investigates this subject by measuring the different morphological contributions to the red sequence since $z=1$, and estimate as high as 60\% of all galaxies go through a passive disk phase. It was not quantified which of these further evolve to spheroidal and which stay disks for the remainder of their lifetimes, but the decaying contribution of passive disks to $z=0.3$ was evidence that some fraction of these did indeed transform to elliptical.
+
+This paper will investigate the evolution of the passive disk population from $z=1$ to $z=0.3$ using galaxies identified in the COSMOS field with morphological classifications from Galaxy Zoo: Hubble. We will measure the fraction of disks which are passive and the fraction of the red sequence occupied by disks as functions of mass and redshift, and argue that three factors drive the evolution of these fractions: 1) the rate of blue disks quenching to form passive disks, 2) the rate of blue disks quenching and simultaneously transforming to elliptical, 3) the rate of red disks transforming to red ellipticals, and 4) the net merger rate of ellipticals. We will implement a simple toy model to simulate the evolution of the relative abundances of red disks, blue disks, and red ellipticals, in order to quantify these rate parameters. We will use the results to estimate the fraction of galaxies that enter a red disk phase, and discuss the likelihoods of the red disk phase being a transitory stage or an end-point of a typical galaxy's evolutionary path.
+
+Section~\ref{sec:Data} will describe our methods for selecting disk galaxies and separating the sample into active / passive populations using a color-color diagnostic. In Section~\ref{sec:correction} we describe a new method of correcting for redshift bias in the detection of disk galaxies with Galaxy Zoo classifications using an artificially-redshifted set of images. In Section~\ref{sec:results} we present our results of the fraction of disk galaxies which are red, and the fraction of red sequence galaxies that are disks, as functions of mass and redshift. Here we also explain our toy-model for measuring the dominant evolutionary pathways taken by galaxies in different bins of mass. We compare our findings with results from the literature and discuss their implications in Section~\ref{sec:Discussion}. Our main conclusions are outlined in Section~\ref{sec:conclusions}. We adopt a $\Lambda$CDM cosmology throughout this paper of $\Omega_m=0.31$ and $H_0=68~\rm km~s^{-1}$ \citep{PlanckCollaboration2015}.
 
 
 \section{Data}
@@ -64,7 +71,7 @@ We identify a sample of non-clumpy disk galaxies using the morphological classif
 \begin{figure}
 \centering
 \includegraphics[width=3.5in,trim={1cm 0cm 0cm 0cm},clip]{figures/edgeon_colorcolor.pdf}
-\caption{}
+\caption{I still need to write a paragraph about this. Basically proving that dust is biasing the red sequence sample to highly inclined galaxies. If we limit to face-on, less likely to be impacted by dust. There is a source I need to dig out that points out that this effect is often still apparent in dust-corrected colors (the ones used in this paper are rest-frame but not dust corrected btw.)}
 \label{fig:edgeon}
 \end{figure}
 To classify the galaxies as quiescent or star-forming, a method similar to that described by \citet{Ilbert2013} (hereafter I13) was used, which implements a rest-frame NUV-$r^{+}$ versus $r^{+}$-J diagnostic. Here are some reasons these colors are great (NUV-r:) \citep{Arnouts2007a,Salim2005a,Wyder2007},\citep{Martin2007}
@@ -90,8 +97,13 @@ where $a_{1}(z) = [0.54,0.38,0.27,0.16,0.05]$ and $a_{2}(z) = [0.19,0.14,0.10,0.
 %\label{fig:volume_lim}
 %\end{figure}   
 
-\section{Correcting for Incompleteness in Disk Detection}
+We note that the evolution of the demarcation lines from $z=1$ to $z\sim0$ is very minimal, and our final results do not change if we perform the separation using static lines.
 
+
+In describing our methods for separating active and passive populations using a color-color separation technique, we have used terminology such that blue/red have been used to describe colors explicitely, while active/passive have been used to describe ongoing/quenched star-formation. The remainder of this paper will assume that the color cuts described in this section adequately separated the active and passive populations, and for convenience the terms red/blue will be used interchangeably with passive/active. k thanks! 
+
+\section{Correcting for Incompleteness in Disk Detection}
+\label{sec:correction}
 In this work, we study the growth of the red sequence population by evaluating the fraction of passive disks as a function of redshift, $\rm N_{red~disks}/(N_{red~disks}+N_{blue~disks})$, as well as the fraction of disks occupying the red sequence, $\rm N_{red~disks}/(N_{red~disks}+N_{red~ellipticals})$. To accurately measure these fractions, the number of disks populating each redshift interval must be known with confidence. To identify disk galaxies in our sample, we set a cut of $f_{\rm features}\ge0.3$, such that galaxies meeting this criteria are considered to have distinguishable features or disk structure (additional cuts are also placed to eliminate clumpy, highly inclined, and merging galaxies; see Section~\ref{sec:sampleselection}). However, it is known that distinguishing disk structure from spheroidal becomes increasingly challenging at high redshifts (for both experts and novice classifiers alike), where features are less resolved and more difficult to identify. \citet{Willett2016} show using a set of artificially-redshifted simulated galaxy images classified in Galaxy Zoo that vote fractions for the same galaxy can be drastically different measured at $z=1$ from $z=0$, often enough to change its morphological classification (we will show the same in Section~\ref{ssec:ferengi}).  Therefore it is predicted that applying a $f_{\rm features}$ cut to identify disks will increasingly underestimate their true number at increasing redshift intervals. A set of artificially redshifted images was used to quantify and correct for this incompleteness in disk detection, described in the next section.
  
 \subsection{FERENGI2 set of artificially redshifted galaxy images}
@@ -156,12 +168,12 @@ f_{D|R}=\frac{N_{RD}\times \xi^{-1}}{N_{RD} + N_{RE}}
 \begin{figure}
 \centering
 \includegraphics[width=3in,trim={0cm 2cm 2cm 1cm},clip]{figures/completenessmoneyplot.pdf}
-\caption{\textbf{Top:}Completeness $\xi$ as a function of redshift for red sequence and blue cloud \ferengi2 galaxies separately. Both populations show a strong dependence on $\xi$ with redshift, but are indistinguishable from each other. \textbf{Bottom:} Completeness as a function of redshift for all  \ferengi2 galaxies (red and blue combined). The equation representing the linear fit is displayed.}
+\caption{\textbf{Top:} Completeness $\xi$ as a function of redshift for red sequence and blue cloud \ferengi2 galaxies separately. Both populations show a strong dependence on $\xi$ with redshift, but are indistinguishable from each other. \textbf{Bottom:} Completeness as a function of redshift for all  \ferengi2 galaxies (red and blue combined). The equation representing the linear fit is displayed.}
 \label{fig:xi}
 \end{figure}
 
 \section{Results}
-\label{sec:Results}
+\label{sec:results}
 In this section we present our results of the evolution of disc galaxies from $z=1$ to $z=0.2$ in a sample of 27,355 $COSMOS$ galaxies morphologically classified in GZH. We will show x, y, and z and talk about it. 
 
 \subsection{The evolving passive disk fractions: $f_{R|D}$ and $f_{D|R}$} 
@@ -169,14 +181,14 @@ In this section we present our results of the evolution of disc galaxies from $z
 \begin{figure*}
 \centering
 \includegraphics[width=\textwidth,trim={0cm 0cm 2cm 1cm},clip]{figures/fractions_modeled.pdf}
-\caption{\textbf{Left:} Passive disk fraction ($\rm N_{red~disks}/(N_{red~disks}+N_{blue~disks})$) vs redshift in four mass bins. \textbf{Right:} Fraction of disks on the red sequence ($\rm N_{red~disks}/(N_{red~disks}+N_{red~ellipticals})$) vs redshift in four mass bins.}
+\caption{\textbf{Left:} Passive disk fraction ($\rm N_{red~disks}/(N_{red~disks}+N_{blue~disks})$) vs redshift in four mass bins. \textbf{Right:} Fraction of disks on the red sequence ($\rm N_{red~disks}/(N_{red~disks}+N_{red~ellipticals})$) vs redshift in four mass bins. The solid lines represent the evolution of the fractions computed by the toy-model described in Section~\ref{sec:results} using rate parameters which yielded the lowest $\chi^2$.}
 \label{fig:f_results}
 \end{figure*}
 
 \begin{figure}
 \centering
 \includegraphics[width=3.5in]{figures/cartoon.pdf}
-\caption{cartoon}
+\caption{Cartoon representing three evolutionary pathways represented in the toy-model described in Section~\ref{sec:results}. Path A represents an active star-forming galaxy which quenches without destroying the disk, becoming a red disk; the fraction of blue galaxies to follow this track is represented by $r_{BD \rightarrow RD}$ in the model. Path B represents a red disk morphologically transition to red ellipitcal; the fraction of red galaxies to follow this track is $r_{RD \rightarrow RE}$. Path C represents a blue disks simultaniously quenching and morphologically transforming to become a red elliptical; the fraction of blue galaxies to follow this track is $r_{BD \rightarrow RE}$. (The fourth driver of the relative numbers of different morphological types is $\kappa_{RE}$, the net merger rate of ellipticals in a given mass bin, and is not represented in the cartoon.) }
 \label{fig:cartoon}
 \end{figure}
 The change in the relative number densities of active/passive disk/elliptical galaxies traces the dominant evolutionary pathways they follow at different mass thresholds. In Figure~\ref{fig:f_results} we measure these using the fractions defined in the previous section, $f_{R|D}$ (left panel) and $f_{D|R}$ (right panel) for four mass bins. We observe significantly different trends in $f_{R|D}$ for the two highest mass bins ($log(M/M_{\odot})>10.7$): for higher-mass galaxies, the fraction of red disks vs. all disks, within error, is either relatively flat or exhibits a small decrease, while the lower-mass galaxies have trends which increase sharply from $z=1$ to $z=0.3$. Similarly for the fraction of red disks on the red sequence: the highest mass bin $log(M/M_{\odot})>11.0$ decreases in $f_{D|R}$, while the lowest-mass bin increases sharply from $f_{D|R}\sim0.05$ to $\sim 0.2$.  
@@ -267,7 +279,8 @@ We find a strong mass dependence on the fraction of blue galaxies to quench to r
 %\end{figure}
 
 
-\section{Discussion}\label{sec:Discussion}
+\section{Discussion}
+\label{sec:Discussion}
 
 We have explored the evolution of the passive disk population since $z=1$ by quantifying their abundances in terms of the fraction of disk galaxies that are red $f_{R|D}$ and the fraction of the red sequence occupied by disks $f_{D|R}$. For both fractions, we observed dependencies on both mass and redshift; this is a strong indication that passive disks play an important role in understanding the processes involved in the quenching and morphological transformation of galaxies. We identified three pathways to describe the evolution of a star-forming disk: $r_{BD \rightarrow RD}$ (the rate of blue disks quenching to red disks), $r_{BD \rightarrow RE}$ (the rate of blue disks quenching and transforming directly to red ellipticals), and $r_{RD \rightarrow RE}$ (the rate of red disks transforming to red ellipticals), and we argue that the relative frequencies of these rates drive the trends in $f_{R|D}$ and $f_{D|R}$. To begin quantifying the occurances of each of the pathways, we developed a toy model to reproduce $f_{R|D}$ and $f_{D|R}$ given some set of rates. Our model was able to constrain $r_{BD \rightarrow RD}$ to a reasonable degree of certainty, but the rest would require a more sophisticated model to deduce.
 
@@ -319,7 +332,7 @@ Science Foundation Grant AST1413610.
 
 This publication makes use of data products from the Two Micron All Sky Survey, which is a joint project of the University of Massachusetts and the Infrared Processing and Analysis Center/California Institute of Technology, funded by the National Aeronautics and Space Administration and the National Science Foundation.
 
-This project made heavy use of the Astropy packages in Python \citep{Robitaille2013}, the \texttt{seaborn} plotting package \citep{Waskom}, and the Tool for OPerations on Catalogues And Tables (TOPCAT), which can be found at \url{www.starlink.ac.uk/topcat/} \citep{topcat2011}. 
+This project made heavy use of the Astropy packages in Python \citep{Robitaille2013}, the \texttt{seaborn} plotting package \citep{Waskom}, and the Tool for OPerations on Catalogues And Tables (TOPCAT), which can be found at \url{www.starlink.ac.uk/topcat/} \citep{Taylor2005}. 
 
 Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan
 Foundation, the Participating Institutions, the National Science Foundation,
