@@ -216,7 +216,14 @@ We have examined the evolution of red disk galaxies since $z=1$ in Figures~\ref{
 What forms a passive disk, and why are they more common in massive galaxies? Why are more massive galaxies more likely to transition quickly out of this phase, while less massive galaxies remain in the phase? 
 
 \subsection{Secular quenching of blue disks}
-Perhaps the most straight-forward mechanism by which a disk could quench without changing morphology is a purely secular process, in which the galaxy's gas supply is simply used up from continued star-formation. This scenario is unlikely to account for a significant portion of the creation of the red disk population, as the timescales for this type of quench would be 1-3Gyr, and galaxies are much more likely to have environmental interactions within that time. 
+
+Perhaps the most straight-forward mechanism by which a disk could quench without changing morphology is a purely secular process, in which an isolated galaxy's gas supply is simply used up from continued star-formation. It is rare, however, for a galaxy to exist in complete isolation long enough for this scenario to occur. The time-scale for complete consumption of gas with no environmental disruptions can be estimated from the amount of gas in a typical galaxy and the rate it is consumed through star-formation: $\tau \sim M_{gas}/{M}_{gas}$, typical estimates giving 1-3 Gyr for total depletion \citep{Larson1980}. [can I get more current references?]
+Most galaxies will have had some kind of environmental interaction within this time [references for this - average interaction time? fraction of galaxies that exist in group environment, with significant ICM?] Therefore it is unlikely the natural exhaustion of gas is star-forming galaxies can account for a significant portion of the creation of red disks.
+
+Since environmental interactions tend to impact the morphology of a galaxy, a simple check would be a comparison of features of disks in the red sequence and blue cloud. B10 using the ZEST classification scheme find the bulk of red sequence disks are early-type, while the late-type disks are found primarily in the blue cloud. The Galaxy Zoo classifications do not offer a comparable method for distinguishing late and early type galaxies, but we can use the bulge prominence information as a proxy. We note that a complete analysis of bulge prominence cannot be done here, as there has been no proper redshift debiasing of this vote fraction, and a thorough investigation will be saved for future work. As a preliminary check, we compare the bulge prominence of red sequence and blue cloud disk galaxies for a low-redshift ($z<0.4$) sample, where any biases should be minimal. 
+
+In GZH, users who have classified a galaxy as featured and not edge-on are instructed to vote on the prominence of the bulge by choosing one of four responses: ``no bulge,'' ``just noticeable'', ``obvious'', and ``dominant''. For this analysis we will compare the sum of the vote fractions $f_{\rm obvious} + f_{\rm dominant}$ for red sequence and blue cloud disk galaxies, shown in Figure~\ref{fig:bulge}. We find a clear difference in distributions, such that the red sequence disks tend to have more prominant bulges. While we present the results of the $z<0.4$ sample to minimize potential redshift bias, we note that the result holds when extended to all redshifts. This supports the conclusions of B10, given that early-type classifications are correlated with dominant bulges. This also agrees with \citet{Masters2010}, who also find larger bulge prominences in red sequence disks for a local Universe sample using Galaxy Zoo 2 classifications. 
+
 \begin{figure}
 \centering
 \includegraphics[width=3.5in]{figures/bulge_comparison.pdf}
@@ -224,13 +231,15 @@ Perhaps the most straight-forward mechanism by which a disk could quench without
 \label{fig:bulge}
 \end{figure}
   
-\subsection{Timescales}
+\subsection{Mass quenching}
+[reword paragraph, badly copy/pasted from old draft]
+In some cases, the formation of a red disk may depend directly on the galaxy's mass, via mass quenching. Evidence for this effect can be seen in the different distributions of disk galaxies on a CMD for different stellar masses \citep{Schawinski2014,Powell2017}. The smooth transition from the blue cloud to the red sequence in the distribution of low to medium mass disk galaxies is evidence for slow quenching timescales. For higher mass disk galaxies, the unimodality is broken, suggesting a more rapid quenching. This could be due to a higher merger rate for more massive galaxies, or as suggested by \citet{Schawinski2014}, evidence for a mass-quenching effect, in which the galaxy's halo reaches a critical mass whereby the gas is inhibited from cooling sufficiently to continue star-formation \citep{Kormendy2004,Dekel2006,Peng2010}. [I think Smethurst talks about this, need to look into this also. mass-quenching could explain red disks at high mass, does it explain anything about our second point? probably not.]
 
-\subsection{Disk regrowth}
 
-[put somewhere] 
-Our first point is in agreement with literature which explores the unimodality of disk galaxies across a CMD \citep{Schawinski2014,Powell2017}. The smooth transition from the blue cloud to the red sequence in the distribution of low to medium mass disk galaxies is evidence for slow quenching timescales. For higher mass disk galaxies, the unimodality is broken, suggesting a more rapid quenching. This could be due to a higher merger rate for more massive galaxies, or as suggested by \citet{Schawinski2014}, evidence for a mass-quenching effect, in which the galaxy's halo reaches a critical mass whereby the gas is inhibited from cooling sufficiently to continue star-formation \citep{Kormendy2004,Dekel2006,Peng2010}. This result is also consistent with B10, who observe the strongest decrease in $f_{D|R}$ from $z=1$ to $z=0.3$ for their most massive galaxies.
+\subsection{Disk regrowth in mergers}
+main points: Mergers tend to produce ellipticals, but if gas fraction is high enough, a new disk can form. Since gas fraction positively correlates with stellar mass, this is consistent with seeing more red disk galaxies in higher mass galaxies. \citep{Sparre2016,Springel2005a,Robertson2006,Governato2009}
 
+\subsection{sections to add? AGN quenching, more environment things, more thoughts on point 2 - why higher mass red disks tend to transform to ellipticals more than lower mass red disks.}
 
 \begin{figure}
 \centering
