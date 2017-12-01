@@ -22,8 +22,10 @@
 
 \title[Galaxy~Zoo~Hubble: passive red discs]{Galaxy~Zoo~Hubble: the evolution of red disc galaxies since $z=1$}
 \author[Galloway et~al.]{\parbox[t]{16cm}{Melanie A. Galloway$^{1}$, Steven P. Bamford$^{3}$, Melanie Beck$^{1}$,
-Hugh Dickinson$^{1}$ Lucy F. Fortson$^{1}$, Chris J. Lintott$^{4}$, Karen L. Masters$^{5,6}$, John I. Phillips$^{1}$, Claudia Scarlata$^{1}$,
-B.D. Simmons$^{4,7}$\footnote{Einstein Fellow}, Kyle W. Willett$^{1}$
+Hugh Dickinson$^{1}$, Lucy F. Fortson$^{1}$, Ross E. Hart$^{3}$, S. J. Kruk $^{4}$, Chris J. Lintott$^{4}$,
+ Karen L. Masters$^{5,6}$, Thomas Melvin, John I. Phillips$^{1}$, Claudia Scarlata$^{1}$,
+ B.D. Simmons$^{4,7}$\footnote{Einstein Fellow}, R.J. Smethurst$^{3}$,
+Kyle W. Willett$^{1}$
 \vspace{0.1in} }\\
 $^{1}$School of Physics and Astronomy, University of Minnesota, 116 Church St. SE, Minneapolis, MN 55455, USA \\
 $^{2}$Department of Physics and Astronomy, University of Kentucky, 505 Rose St., Lexington, KY 40506, USA \\
@@ -36,7 +38,7 @@ $^{7}$Center for Astrophysics and Space Sciences, Department of Physics, Univers
 \maketitle
 
 \begin{abstract}
-We study the evolution of the passive disc population from $z=1$ to $z=0.3$ in a sample of 20,000 galaxies from the COSMOS field and morphologically classified by the Galaxy Zoo: Hubble project. We find that the fraction of discs occupying the red sequence, as well as the fraction of disc galaxies that are red, decreases for the most massive galaxies ($\rm log(M/M_{\odot})>11$) but increases for lower masses. Our observations are consistent with a physical scenario in which more massive galaxies are more likely to enter a red disc phase, and more massive red discs are more likely to morphologically transform into ellipticals than their less massive counterparts. This paper also introduces a new method for using artificially-redshifted galaxies to quantify the redshift-bias in Galaxy Zoo classifications in order to accurately measure the fraction of disc galaxies as a function of redshift.  
+We study the evolution of the passive disc population from $z=1$ to $z=0.3$ in a sample of 20,000 galaxies from the COSMOS field and morphologically classified by the Galaxy Zoo: Hubble project. We find that the fraction of disc galaxies that are red, as well as the fraction of red sequence galaxies that are discs, decreases for the most massive galaxies ($\rm log(M/M_{\odot})>11$) but increases for lower masses. Our observations are consistent with a physical scenario in which more massive galaxies are more likely to enter a red disc phase, and more massive red discs are more likely to morphologically transform into ellipticals than their less massive counterparts. This paper also introduces a new method for using artificially-redshifted galaxies to quantify the redshift-bias in Galaxy Zoo classifications in order to accurately measure the fraction of disc galaxies as a function of redshift.  
 
 
 \end{abstract}
@@ -44,19 +46,19 @@ We study the evolution of the passive disc population from $z=1$ to $z=0.3$ in a
 \section{Introduction}
 \label{sec:Intro}
 
-Passive, red discs are an unconventional class of galaxies. They do not adhere to the standard bimodality of the colour-morphology relationship, whereby most galaxies tend to exist in one of two populations: blue, late-type discs exhibiting active star formation, and red, early-type ellipticals showing little to no signs of recent star formation \citep{Strateva2001, Baldry2004, Correa2017}. The division between the two populations is particularly apparent when represented visually on a colour-magnitude or colour colour diagram. Galaxies tend to populate in two distinct regions: the ``red sequence'' in the upper band, which contains predominantly early-type galaxies, and the ``blue cloud'' in the lower, containing mostly late-type spirals. This relationship has been shown to hold for $\gtrsim$ 85\% of galaxies out to z $\sim$ 1 \citep{Bell2004,Cirasuolo2007,Mignoli2009} and possibly beyond \citep{Giallongo2005, vanDokkum2006, Franzetti2007, Cassata2008}. 
+Passive, red discs are an unconventional class of galaxies. They do not adhere to the standard bimodality of the colour-morphology relationship, whereby most galaxies tend to exist in one of two populations: blue, late-type discs exhibiting active star formation, and red, early-type ellipticals showing little to no signs of recent star formation \citep{Strateva2001, Baldry2004, Correa2017}. The division between the two populations is particularly apparent when represented visually on a colour-magnitude or colour-colour diagram. Galaxies tend to populate in two distinct regions: the ``red sequence'' in the upper band, which contains predominantly early-type galaxies, and the ``blue cloud'' in the lower, containing mostly late-type spirals. This relationship has been shown to hold for $\gtrsim$ 85\% of galaxies out to z $\sim$ 1 \citep{Bell2004,Cirasuolo2007,Mignoli2009} and possibly beyond \citep{Giallongo2005, vanDokkum2006, Franzetti2007, Cassata2008}. 
 
 The relatively tight correlation between galaxy colour (which traces the stellar population characteristics) and morphology (which traces dynamical history) suggests an evolutionary link between the two. In the simplest interpretation, it could be hypothesized that galaxies tend to begin their lives as young, star-forming discs, until some mechanism (secular or external) causes star-formation to cease while the galaxy simultaneously undergoes a morphological transformation from disc to spheroidal. The growing evidence for a significant population of galaxies which breaks this relationship, however, mandates more nuanced interpretations of this model. 
 
-The passive disc population has been identified as an observable that may improve the understanding of the mechanisms driving the empirically indicated, albeit currently putative, evolutionary link between colour and morphology since their initial discovery.  In one of the earliest documented reports of this class of red disc-like objects, \citet{VandenBergh1976} identified a set of spirals in the Virgo cluster which were forming stars ``much less vigorously'' than the other galaxies of the same type, which were dubbed ``anemic spirals''. Analysis of this population suggested the possibility of ``gentle'' quenching mechanisms which could shut off star-formation without disrupting the morphology (in contrast to violent processes such as mergers, which are capable of destroying the disc \citep{Bell2004,Negroponte1983,DeLucia2006,Springel2005}). The low gas content in the anemic spirals suggested that subtle environmental factors played a role in stripping the gas required for ongoing star-formation, a process commonly known now as ram-pressure stripping \citep{Gunn1972,Steinhauser2016}. 
+The passive disc population has been identified as an observable that may improve the understanding of the mechanisms driving the empirically indicated, albeit currently putative, evolutionary link between colour and morphology since their initial discovery.  In one of the earliest documented reports of this class of red disc-like objects, \citet{VandenBergh1976} identified a set of spirals in the Virgo cluster which were forming stars ``much less vigorously'' than the other galaxies of the same type, which were dubbed ``anemic spirals''. Analysis of this population suggested the possibility of ``gentle'' quenching mechanisms which could shut off star-formation without disrupting the morphology, (in contrast to violent processes such as mergers, which are capable of destroying the disc \citep{Bell2004,Negroponte1983,DeLucia2006,Springel2005}). The low gas content in the anemic spirals suggested that subtle environmental factors played a role in stripping the gas required for ongoing star-formation, a process commonly known now as ram-pressure stripping \citep{Gunn1972,Steinhauser2016}. 
 
-Subsequent studies have investigated other possible mechanisms that could lead to the formation of passive discs, and how significant of a contribution this population makes to understanding the full picture of galaxy evolution. Environment is believed to play a strong role in their formation; for instance, many studies find passive spirals preferentially occupying high-density environments (e.g. \citet{Dressler1999, Poggianti1999, Goto2003, Deng2009, Hughes2009}). \citet{Moran2006} model the star-formation histories of passive spirals at $z\sim0.4$ and find them to be consistent with models for spirals affected by gas-starvation \citep{Larson1980, Quilis2000, Bekki2002}. Environment plays a significant factor in this scenario, whereby the interaction of the galaxy with the intra-cluster medium halts the accretion of gas onto the galaxy, inhibiting star-formation and causing a quench without disrupting the morphology significantly. Their results did not imply that starvation was the only mechanism responsible for building up the population of discs in the red sequence, but the authors do conclude that passive discs are indeed an important transition population.
+Subsequent studies have investigated whether other possible mechanisms could lead to the formation of passive discs, and how significant a contribution this population makes to understanding the full picture of galaxy evolution. Environment is believed to play a strong role in their formation; for instance, many studies find passive spirals preferentially occupying high-density environments (e.g. \citet{Dressler1999, Poggianti1999, Goto2003, Deng2009, Hughes2009, Fraser-McKelvie2017}). \citet{Moran2006} model the star-formation histories of passive spirals at $z\sim0.4$ and find them to be consistent with models for spirals affected by gas-starvation \citep{Larson1980, Quilis2000, Bekki2002}. Environment plays a significant factor in this scenario, whereby the interaction of the galaxy with the intra-cluster medium halts the accretion of gas onto the galaxy, inhibiting star-formation and causing a quench without significantly disrupting the morphology. Their results did not imply that starvation was the only mechanism responsible for building up the population of discs in the red sequence, but the authors do conclude that passive discs are indeed an important transition population.
 
-\citet{Masters2010} is one of the few studies which finds no strong correlation of passive discs with environment, but do not rule out environment playing a significant role in their creation. They also find strong evidence for quenching via completely secular processes; namely their sample of passive discs being more massive and having a higher bar fraction than their star-forming counterparts. Massive galaxies are more likely to have been assembling for sufficiently long times to consume all of their gas, without environmental stripping being a direct factor. This option could explain the observed correlations with density and passivity, given that higher-density regions were more likely to have been assembled at earlier times. Secondly, \citet{Masters2010} observed a significantly higher bar fraction in passive spirals (67\%) than star-forming spirals (27\%). Bars are known for their ability to efficiently drive gas to the centres of galaxies via a redistribution of angular momentum throughout the disc \citep{Sellwood1993,Shlosman1989,Ann2005}, which could increase central star-formation \citep{Hawarden1986,Ho1997} or feed the central supermassive black hole \citep{Athanassoula1992,Friedli1993}. The excess of bars in passive discs therefore suggests that bars were responsible for quickly using up the gas in the galaxy, resulting in subsequent quenching. 
+\citet{Masters2010} is one of the few studies which finds no strong correlation of passive discs with environment, but does not rule out environment playing a significant role in their creation. They also find strong evidence for quenching via completely secular processes; namely their sample of passive discs being more massive and having a higher bar fraction than their star-forming counterparts. Massive galaxies are more likely to have been assembling for sufficiently long times to consume all of their gas, without environmental stripping being a direct factor. This option could explain the observed correlations with density and passivity, given that higher-density regions were more likely to have been assembled at earlier times. Secondly, \citet{Masters2010} observed a significantly higher bar fraction in passive spirals (67\%) than star-forming spirals (27\%). Bars are known for their ability to efficiently drive gas to the centres of galaxies via a redistribution of angular momentum throughout the disc \citep{Sellwood1993,Shlosman1989,Ann2005}, which could increase central star-formation \citep{Hawarden1986,Ho1997} or feed the central supermassive black hole \citep{Athanassoula1992,Friedli1993,Galloway2015}. The excess of bars in passive discs therefore suggests that bars were responsible for quickly using up the gas in the galaxy, resulting in subsequent quenching. 
 
 Passive discs have thus far been proposed as both a final stage of galactic evolution, driven by secular and external processes capable of exhausting gas required for star-formation, and as a transition phase of galaxies toward a final evolution to red spheroidal, driven by processes which quench and morphologically transform on different timescales, or multiple separate processes acting independently. Understanding the significance of the passive disc population is therefore unquestionably an important key to understanding galaxy evolution as a whole. \citet{Bundy2010} investigate this subject by measuring the different morphological contributions to the red sequence since $z=1$, and estimate as many as 60\% of all galaxies go through a passive disc phase. They do not quantify which of these subsequently evolve to spheroidal galaxies and which persist as discs for the remainder of their lifetimes, but the decaying contribution of passive discs until as late as $z=0.3$ was evidence that some fraction of these did indeed transform to ellipticals.
 
-This paper will investigate the evolution of the passive disc population from $z=1$ to $z=0.3$ using galaxies identified in the COSMOS field with morphological classifications from Galaxy Zoo: Hubble. We will measure the fractional contribution of red discs, blue discs, red ellipticals, and blue ellipticals with respect to the total population as functions of both redshift and stellar mass. In addition, we will measure the evolution of both the fraction of discs which are passive and the fraction of the red sequence occupied by discs. By assessing the mass-dependence of the significance of the red disc population, and discuss the likelihoods of the red disc phase being a transitory stage or an end-point of a typical galaxy's evolutionary path.
+This paper investigates the evolution of the passive disc population from $z=1$ to $z=0.3$ using galaxies identified in the COSMOS field with morphological classifications from Galaxy Zoo: Hubble. We measure the fractional contribution of red discs, blue discs, red ellipticals, and blue ellipticals with respect to the total population as functions of both redshift and stellar mass. In addition, we will measure the evolution of both the fraction of discs which are passive and the fraction of the red sequence galaxies which are discs. We assess the mass-dependence of the significance of the red disc population, and discuss the likelihoods of the red disc phase being a transitory stage or an end-point of a typical galaxy's evolutionary path.
 
 Section~\ref{sec:Data} describes our methods for selecting disc galaxies and separating the sample into active / passive populations using a colour-colour diagnostic. In Section~\ref{sec:correction} we describe a new method of correcting for redshift bias in the classifiction of disc galaxies by Galaxy Zoo volunteers using an artificially-redshifted set of images. In Section~\ref{sec:results} we present our results for the fraction of disc galaxies which are red, and the fraction of red sequence galaxies that are discs, as functions of mass and redshift. We compare our findings with results from the literature and discuss their implications in Section~\ref{sec:discussion}. Our main conclusions are outlined in Section~\ref{sec:conclusions}. We adopt a $\Lambda$CDM cosmology throughout this paper of $\Omega_m=0.31$ and $H_0=68~\rm km~s^{-1} Mpc^{-1}$ \citep{PlanckCollaboration2015}.
 
@@ -64,7 +66,7 @@ Section~\ref{sec:Data} describes our methods for selecting disc galaxies and sep
 \section{Data}
 \label{sec:Data}
 
-The parent sample of galaxies in this paper is drawn from the Galaxy Zoo: Hubble (GZH) catalog \citep{Willett2016}, which provides morphological classifications for galaxies sourced from the HST Legacy Surveys. From the main catalog we select galaxies with imaging from the Cosmic Evolution Survey (COSMOS, \citet{Scoville2007}) in the redshift range $0.2<z<1$.  Rest frame NUV-r and r-J colours are taken from the UltraVISTA catalog \citep{McCracken2012,Ilbert2013}.
+The parent sample of galaxies in this paper is drawn from the Galaxy Zoo: Hubble (GZH) catalog \citep{Willett2016}, which provides morphological classifications for galaxies sourced from the HST Legacy Surveys. From the main catalog we select galaxies with imaging from the Cosmic Evolution Survey (COSMOS, \citet{Scoville2007}) in the redshift range $0.2<z<1$. Stellar masses and rest frame NUV-r and r-J colours are taken from the UltraVISTA catalog \citep{McCracken2012,Ilbert2013}.
 
 \subsection{Sample Selection}
 \label{sec:sampleselection}
@@ -72,18 +74,18 @@ The parent sample of galaxies in this paper is drawn from the Galaxy Zoo: Hubble
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{figures/mass_selection.pdf}
-\caption{[apologies this is not an aesthetically pleasing plot yet... comments on making it so are welcome.] The box enclosed by the dotted lines displays our mass-limited sample, defined as $0.2<z<1$ and $10.15<\rm \log(M/M_{\odot})<11.15$. Red sequence and blue cloud galaxies are plotted separately to illustrate the difference in limiting magnitudes for galaxies whose fluxes are dominated by I-band vs. V-band light respectively. It can be seen here that the mass cut of at least $\rm \log(M/M_{\odot})>10.15$ is effective for ensuring detection of all red galaxies out to $z=1$. Only random subset of points are displayed for clarity.}
+\caption{[sorry, still need to add contours to this! (possibly 1-d histograms on the side)] The box enclosed by the dotted lines displays our mass-limited sample, defined as $0.2<z<1.1$ and $10.1<\rm \log(M/M_{\odot})<11.3$. Red sequence and blue cloud galaxies are plotted separately to illustrate the difference in limiting magnitudes for galaxies whose fluxes are dominated by I-band vs. V-band light respectively. It can be seen here that the mass cut of at least $\rm \log(M/M_{\odot})>10.1$ is effective for ensuring detection of all red galaxies out to $z=1$. Only random subset of points are displayed for clarity.}
 \label{masscut}
 \end{figure}
 
-We identify a mass-limited sample of 20,811 galaxies within $0.2<z<1.0$ and $10.15<\rm \log(M/M_{\odot})<11.15$, indicated by the dashed lines in Figure~\ref{masscut}. We categorise the galaxies as disc-like or elliptical using the morphological classifications provided by GZH. In the Galaxy Zoo project, volunteers classify galaxy images by answering simple questions prompted via an online interface. We use the question, ``Is the galaxy simply smooth and rounded, with no sign of features or a disk" to classify a galaxy as disc-like by applying a threshold on the fraction of users to answer ``features or disk'', $f_{\rm features}\ge0.3$. For a thorough discussion of the full set of questions and corresponding morphological classifications available in GZH, see \citet{Willett2016}. We also exclude mergers and irregulars from the analysis by applying cuts of $\rm f_{irregular} > 0.3$ and $\rm f_{merger} > 0.5$ for galaxies which have at least 20 ``yes'' votes for the question, ``Is there anything odd?''. 
+We identify a mass-limited sample of 20,811 galaxies within $0.2<z<1.1$ and $10.1<\rm \log(M/M_{\odot})<11.3$, indicated by the dashed lines in Figure~\ref{masscut}. We categorise the galaxies as disc-like or elliptical using the morphological classifications provided by GZH. In the Galaxy Zoo project, volunteers classify galaxy images by answering simple questions prompted via an online interface. We use the question, ``Is the galaxy simply smooth and rounded, with no sign of features or a disk" to classify a galaxy as disc-like by applying a threshold on the fraction of users to answer ``features or disk'', $f_{\rm features}\ge0.3$. For a thorough discussion of the full set of questions and corresponding morphological classifications available in GZH, see \citet{Willett2016}. We also exclude mergers and irregulars from the analysis by applying cuts of $\rm f_{irregular} > 0.3$ and $\rm f_{merger} > 0.5$ for galaxies which have at least 20 ``yes'' votes for the question, ``Is there anything odd?''. 
 
 %color diagnostic
-To classify the galaxies as quiescent or star-forming, a method similar to that described by \citet{Ilbert2013} (hereafter I13) was used, which implements a rest-frame NUV-$r$ versus $r$-J diagnostic. NUV-r colors perform better than pure optical colors (like u-r) in separating the blue cloud from the red sequence, due to NUV bands exhibiting a greater sensitivity to low levels of star-formation \citep{Martin2007,Wyder2007}. This makes it an excellent probe for stellar populations with light-weighted age of $\rm 10^8$ year, while $r$ is primarily sensitive to those of $\rm 10^9$ year \citep{Arnouts2007a}. NUV - r has thus been shown to be very well correlated, and an excellent indicator of, current vs. past star formation activity \citep{Martin2005,Salim2005a}.  
+To classify the galaxies as passive or star-forming, a method similar to that described by \citet{Ilbert2013} (hereafter I13) was used, which implements a rest-frame NUV-$r$ versus $r$-J diagnostic. NUV-r colors perform better than pure optical colors (like u-r) in separating the blue cloud from the red sequence, due to NUV bands exhibiting a greater sensitivity to low levels of star-formation \citep{Martin2007,Wyder2007}. This makes it an excellent probe for stellar populations with light-weighted age of $\rm 10^8$ year, while $r$ is primarily sensitive to those of $\rm 10^9$ year \citep{Arnouts2007a}. NUV - r has thus been shown to be very well correlated, and an excellent indicator of, current vs. past star formation activity \citep{Martin2005,Salim2005a}.  
 
-The demarcation line to separate the quiescent and active populations at $z=1$ is adopted from I13, which defines the quiescent galaxies as those which satisfy: $M_{NUV}-M_{r} > 3(M_{r}-M_{J})+1$ and $M_{NUV}-M_{r} > 3.1$. I13 applies this criteria to all galaxies in a range of $0.2<z<3$, although it performs best at separating the two populations in the redshift bin $0.7<z<1.2$, where $>98\%$ of galaxies identified as quiescent exhibited specific star formation rates less than $\rm \log(sSFR) = -11$ (see Figure 3 of I13). This performance justifies our use of the I13 separation criteria for galaxies at $z=1$, but we compute the evolution of the demarcation lines as a function of redshift to $z=0$. 
+The demarcation line to separate the passive and star-forming populations at $z=1$ is adopted from I13, which defines the red sequence galaxies as those which satisfy: $M_{NUV}-M_{r} > 3(M_{r}-M_{J})+1$ and $M_{NUV}-M_{r} > 3.1$. I13 applies this criteria to all galaxies in a range of $0.2<z<3$, although it performs best at separating the two populations in the redshift bin $0.7<z<1.2$, where $>98\%$ of galaxies identified as quiescent exhibited specific star formation rates less than $\rm \log(sSFR) = -11$ (see Figure 3 of I13). This performance justifies our use of the I13 separation criteria for galaxies at $z=1$, but we compute the evolution of the demarcation lines as a function of redshift to $z=0$. 
 
-The evolution of $r-J$ and $NUV-r$ colours was derived using a stellar population synthesis model from \citet{Bruzual2003}. An instantaneous-burst model (ssp) was chosen from the Padova1994 track to represent the colour evolution of a passively evolving galaxy, with a metallicity $Z=0.008=0.4Z_{\sun}$, which is the typical metallicity of passive galaxies with mass $9 < \rm \log(M_{*}/M_{\odot}) < 10$ (\citet{Peng2015}, Figure 2a), chosen to correspond to the median mass of the sample ($\rm \log(M_{*}/M_{\odot})=9.7)$. A linear fit was generated for each colour within the range $0<z<2$, and the slopes for each were used to redefine the population separators in five redshift bins with widths $\Delta z=0.2$. We explicitely define one bin bracketing a central redshift $z=0.007$ in order to coincide with the sample of SDSS galaxies used to identify completeness in disc detection (\ferengi2, Section~\ref{sec:correction}). The remaining four bins coincide with the HST sample, with central values $z$ = [0.30, 0.50, 0.70, 0.90]. The quiescent galaxies are thus defined in these bins as those that satisfy:
+The evolution of $r-J$ and $NUV-r$ colours was derived using a stellar population synthesis model from \citet{Bruzual2003}. An instantaneous-burst model was chosen from the Padova 1994 track to represent the colour evolution of a passively evolving galaxy, with a metallicity $Z=0.008=0.4Z_{\sun}$. A linear fit was generated for each colour within the range $0<z<2$, and the slopes for each were used to redefine the population separators in five redshift bins with widths $\Delta z=0.2$. We explicitely define one bin bracketing a central redshift $z=0.007$ in order to coincide with the sample of SDSS galaxies used to identify completeness in disc detection (\ferengi2, Section~\ref{sec:correction}). The remaining four bins coincide with the HST sample, with central values $z$ = [0.30, 0.50, 0.70, 0.90]. The red sequence galaxies are thus defined in these bins as those that satisfy:
 
 \begin{equation}
 M_{NUV}-M_{r} > 3.1 + a_{1}(z)
@@ -94,14 +96,6 @@ M_{NUV}-M_{r} > 3(M_{r}-M_{J} + a_{2}(z))+ a_{1}(z) + 1
 \end{equation}
 
 \noindent where $a_{1}(z) = [0.54,0.38,0.27,0.16,0.05]$ and $a_{2}(z) = [0.19,0.14,0.10,0.06,0.02]$. 
-% Figure - mag vs. z (needed??? questionable. useful? also questionable. ) 
-%\begin{figure}
-%\centering
-%\includegraphics[width=3in]{figures/mag_z_limit.pdf}
-%\caption{70,198 COSMOS galaxies cross-matched in GZH and UltraVISTA (all points). 27,584 are in volume-limited sample (red points).}
-%\label{fig:volume_lim}
-%\end{figure}   
-
 We note that the evolution of the demarcation lines from $z=1$ to $z\sim0$ is very minimal, and our final results do not change if we perform the separation using the $z=1$ definition.
 
 After separating the sample by color, it was observed that the red sequence region of the sample was dominated by highly-inclined galaxies, shown in Figure~\ref{fig:edgeon}. Given that spectral colour of a galaxy's combined stellar population should be independent of the angle in which it is observed, it is clear that the inclined galaxy colours are strongly affected by dust-reddening. Although we are not using dust-corrected colours in our colour-colour separation, inclination has shown to have an affect on colours even in those which dust-corrected has been attempted \citep{Morselli2016a,Devour2017}. We therefore remove highly inclined discs from the sample using an inclination limit defined by GZH vote fractions: $f_{\rm not~edge-on} > 0.3$ and $N_{\rm not~edge-on}>10$ (right panel of Figure~\ref{fig:edgeon}).  
@@ -109,7 +103,7 @@ After separating the sample by color, it was observed that the red sequence regi
 \begin{figure}
 \centering
 \includegraphics[width=3.5in,trim={1cm 0cm 1cm 1cm},clip]{figures/edgeon_colorcolor.pdf}
-\caption{The effect of reddening for highly inclined galaxies. On the left panel is the distribution of $\rm f_{edge-on,no}$, which is the fraction of Galaxy Zoo users who voted ``no'' in response to the question ``Could this be a galaxy viewed edge-on?''. This vote correlates with inclination angle, such that low values represent highly inclined galaxies, and high values represent face-on galaxies. The bins are colored such that darker blue bins have a higher fraction of highly inclined galaxies, and white bins have high fractions of face-on galaxies. There is an obvious bias towards redder colours for galaxies with high inclination angles (low votes for $\rm f_{edge-on,no}$). We therefore implement a cut of $\rm f_{edge-on,no}>0.3$ to ensure that observed red colours are an indicator of a lack of star-formation, and not dust-reddening. }
+\caption{The effect of reddening for highly inclined galaxies. On the left panel is the distribution of $\rm f_{edge-on,no}$, which is the fraction of Galaxy Zoo users who voted ``no'' in response to the question ``Could this be a galaxy viewed edge-on?''. This vote correlates with inclination angle, such that low values represent highly inclined galaxies, and high values represent face-on galaxies. The bins are colored such that darker blue bins have a higher fraction of highly inclined galaxies, and white bins have high fractions of face-on galaxies. There is an obvious bias towards redder colours for galaxies with high inclination angles (low votes for $\rm f_{edge-on,no}$). We therefore implement a cut of $\rm f_{edge-on,no}>0.3$ to ensure that observed red colours are an indicator of a lack of star-formation, and not dust-reddening (right panel). }
 \label{fig:edgeon}
 \end{figure}
 
@@ -142,14 +136,6 @@ In this work, we identify disc galaxies in our sample using a cut of $f_{\rm fea
 
 The \ferengi2 dataset was used to measure the completeness/contamination in visual disc/elliptical detection, from which correction factors $\xi_D$ and $\xi_E$ were derived. These are defined as the number of discs/ellipticals detected divided by the true number of discs/ellipticals expected to exist in a given redshift interval: $ \xi_D(\it{z})=N_{\rm discs~detected}/N_{\rm discs~true}$, and $\xi_E(\it{z})=N_{\rm ellipticals~detected}/N_{\rm ellipticals~true}$. 
 
-
-%\begin{equation}
-%f_{R|D}=\frac{N_{RD}\times \xi^{-1}_{red~discs}}{N_{RD}\times \xi^{-1}_{red~discs} + N_{BD} \times \xi^{-1}_{blue~discs}}
-%\label{eqn:fdir}
-%\end{equation}
-
-%If there is no colour bias in disc detection, $\xi_{red~discs}=\xi_{blue~discs}$, and this term cancels out, leaving the fraction unchanged. If there is a bias, however, the $\xi$ terms do not cancel, and the incompleteness in disc detection could have a large effect on the red disc fraction. Therefore a careful measurment of $\xi$ is estimated for both red and blue disc galaxies using the \ferengi2 set of simulated images. 
-
 The completeness values $\xi_D(z)$ and contamination values $\xi_D(z)$ were computed for each of the 8 redshifts represented in the \ferengi2 dataset. An example calculation of $\xi_D$ in the $z=0.7$ bin is shown in Figure~\ref{fig:inc_subplot}. Each point represents a \ferengi2 galaxy, where the y-axis indicates values of \ffeatures~measured in the image redshifted to $z=0.7$, and the x-axis indicates values of \ffeatures~measured in the same galaxy redshifted to $z=0.3$. Disk galaxies are identified as those for which \ffeatures~$\ge0.3$. Since, on average, \ffeatures~decreases for the same galaxy when it is viewed at higher redshifts, the number of galaxies meeting this threshold is always lower at higher redshifts than at $z=0.3$. This is indicated by the dotted lines: galaxies to the right of the vertical dashed line at $\rm f_{features,z=0.3}=0.3$ are identified as discs at $z=0.3$; their sum is considered the ``true'' number of discs, $\rm N_{true}$. Similarly, the galaxies above the horizontal line at $\rm f_{features,z=0.7}=0.3$ are identified as discs at $z=0.7$; their sum is the ``detected'' number of discs at $z=0.7$, or $\rm N_{discs~detected}$. The figure makes it obvious that $\rm N_{discs~detected}$ is much lower than $\rm N_{discs~true}$, emphasizing the increasing difficulty in detecting features at higher redshifts. Their ratio is the completeness $\xi_D$; in this example $\xi_D(z=0.7)=0.61$, meaning only 61\% of discs were detected at this redshift. This process was repeated for the elliptical galaxies in each bin, defined as those with $f_{\rm features}<0.3$. Conversely for the ellipticals, $N_{\rm ellipticals, detected}$ is always lower than $N_{\rm ellipticals, true}$, yielding contamination factors $\xi_E>1$ in each redshift bin. Measurments of $\xi_D$ and $\xi_E$ for each redshift interval are shown in the right panels of Figure~\ref{fig:xi}.
 
 \begin{figure}
@@ -167,13 +153,13 @@ The completeness values $\xi_D(z)$ and contamination values $\xi_D(z)$ were comp
 \end{figure}
 
 
-It was possible that completeness/contamination in disc/elliptical detection may be a function of other parameters in addition to redshift. For example, at fixed redshift, it is a reasonable supposition that features could be easier to detect in galaxies that have higher mass, radius, or surface brightness. To test whether these parameters also impact the number of discs/ellipticals detected, $\xi_D$ and $\xi_E$ were measured in fixed redshift bins as functions of surface brightness, effective radius, and mass. The surface brightness was calculated as $\mu = m + 2.5 \times \log_{10}{(2 \times (b/a) \times \pi R_e^2 )}$, using {\tt MAG\_AUTO}, $b/a$ and $R_{e}$, derived by the \sextractor{} utility using the \Iband{} band images. The effective radius used was the 50\% {\tt FLUX\_RADIUS} converted to kpc, and the masses used were the {\tt MEDIAN} values in the MPA-JHU DR7 catalog \citep{Kauffmann2003b}. Similar to \citet{Willett2016}, who found no effect on $f_{\rm features}$ with surface brightess, we did not detect any effect on $\xi_D$ or $\xi_E$ with any of the above parameters. 
+It was possible that completeness/contamination in disc/elliptical detection may be a function of other parameters in addition to redshift. For example, at fixed redshift, it is a reasonable supposition that features could be easier to detect in galaxies that have higher mass, radius, or surface brightness. To test whether these parameters also impact the number of discs/ellipticals detected, $\xi_D$ and $\xi_E$ were measured in fixed redshift bins as functions of surface brightness, effective radius, and mass. The surface brightness was calculated as $\mu = m + 2.5 \times \log_{10}{(2 \times (b/a) \times \pi R_e^2 )}$, using {\tt MAG\_AUTO}, $b/a$ and $R_{e}$, derived by the \sextractor{}~\citep{Bertin1996} utility using the \Iband{} band images. The effective radius used was the 50\% {\tt FLUX\_RADIUS} converted to kpc, and the masses used were the {\tt MEDIAN} values in the MPA-JHU DR7 catalog \citep{Kauffmann2003b}. Similar to \citet{Willett2016}, who found no effect on $f_{\rm features}$ with surface brightess, we did not detect any effect on $\xi_D$ or $\xi_E$ with any of the above parameters. 
 
 As a final check, we computed $\xi_D$ and $\xi_E$ as functions of redshift for the blue cloud and the red sequence separately, to detect any color-dependence on disc/elliptical detection; results are shown in the left panel of Figure~\ref{fig:xi}. $\xi_{RD}$ and $\xi_{BD}$ refer to the completeness of red and blue disc galaxies, and $\xi_{RE}$/$\xi_{BE}$ refer to the contamination of red and blue ellipticals. No significant difference was detected between the two populations, which is apparent from the overlapping $1\sigma$ errors on the plot. $\xi_D$ and $\xi_E$ were computed for the combined red and blue populations in bins of redshift between 0.3 and 1.0 with widths $\Delta z = 0.1$. Linear relationships for $\xi_D$ and $\xi_E$ as functions of redshift were derived: 
 
 \begin{align}
-\xi_D(z) = -0.97 \pm 0.04 (z) + 1.29 \pm 0.02 \nonumber \\
-\xi_E(z) = 0.32 \pm 0.02 (z) + 0.90 \pm 0.01
+\xi_D(z) = (-0.97 \pm 0.04) (z) + 1.29 \pm 0.02 \nonumber \\
+\xi_E(z) = (0.32 \pm 0.02) (z) + 0.90 \pm 0.01
 \label{eqn:xis}
 \end{align}
  
@@ -187,7 +173,7 @@ N^{'}_{RE}(z) = N_{RE}(z) \times \xi_E^{-1}(z)
 \label{eqn:N_corrections}
 \end{align}
 
-\noindent where unprimed numbers refer to the raw number counts of blue disks (BD), red disks (RD), blue ellipticals (BE), and red ellipticals (RE) in a given redshift interval in the GZH sample, and primed numbers represent the completeness/contamination-corrected values. A summary of all raw and corrected counts in bins of stellar mass and redshift is given in Appendix B. 
+\noindent where unprimed numbers refer to the raw number counts of blue disks (BD), red disks (RD), blue ellipticals (BE), and red ellipticals (RE) in a given redshift interval in the GZH sample, and primed numbers represent the completeness/contamination-corrected values. Tables of all raw and corrected counts in bins of stellar mass and redshift are given in Appendix~\ref{appx:datatables}. 
 
 \section{Results}
 \label{sec:results}
@@ -196,7 +182,7 @@ In this section we present our results for the evolution of the fraction of star
 \begin{figure*}
 \centering
 \includegraphics[width=\textwidth,trim={0cm 0cm 2cm 1cm},clip]{figures/morphologies_evolved.pdf}
-\caption{Evolution of four types of galaxy populations since $z=1$: blue discs (blue open stars), red discs (red closed stars), blue ellipticals (blue open circles), and red ellipticals (red closed circles). Each point represents the fraction of the indicated type with respect to the total population, such that all points in a given redshift, mass bin sum to 1. Errors on each fraction are indicated by the shaded regions, and are propagations of $\sqrt{N}$ counting errors and the errors associated with the functional fits to the correction terms $\xi_{\rm disc}$ and $\xi_{\rm elliptical}$ (Section~\ref{ssec:xi}). }
+\caption{Evolution of four types of galaxy populations since $z=1$: blue discs (blue open stars), red discs (red closed stars), blue ellipticals (blue open circles), and red ellipticals (red closed circles). Each point represents the fraction of the indicated type with respect to the total population, such that all points in a given redshift, mass bin sum to 1. Statistical errors were calculated as propogations of multinomial counting errors and the errors associated with the functional fits to the correction terms $\xi_D$ and $\xi_E$. Systematic errors were calculated by bootstrapping the classifier votes for each galaxy and re-calculating the fractional contributions of each type; errors were taken as the $1\sigma$ dispersion in the fractions. The total error, represented by the shaded regions, is the statistical and systematic errors added in quadrature.} 
 \label{fig:all_plot}
 \end{figure*}
 
@@ -204,7 +190,7 @@ In this section we present our results for the evolution of the fraction of star
 \begin{figure*}
 \centering
 \includegraphics[width=\textwidth,trim={0cm 0cm 2cm 1cm},clip]{figures/red_disk_fractions.pdf}
-\caption{\textbf{Left:} Passive disc fraction ($\rm N_{red~discs}/(N_{red~discs}+N_{blue~discs})$) vs redshift in four mass bins. \textbf{Right:} Fraction of discs on the red sequence ($\rm N_{red~discs}/(N_{red~discs}+N_{red~ellipticals})$) vs redshift in four mass bins. Errors on each fraction are indicated by the shaded regions, and are propagations of $\sqrt{N}$ counting errors and the errors associated with the functional fits to the correction terms $\xi_{\rm disc}$ and $\xi_{\rm elliptical}$ (Section~\ref{ssec:xi}).} 
+\caption{\textbf{Left:} Red disc fraction ($f_{R|D} = \rm N^{'}_{RD}/(N^{'}_{RD}+N^{'}_{BD})$, equation~\ref{eqn:f_RD}) vs redshift in four mass bins. \textbf{Right:} Red sequence disc fraction ($f_{D|R} = \rm N^{'}_{RD}/(N^{'}_{RD}+N^{'}_{RE}), equation~\ref{eqn:f_DR}$) vs redshift in four mass bins. Statistical errors were calculated as propogations of multinomial counting errors and the errors associated with the functional fits to the correction terms $\xi_D$ and $\xi_E$. Systematic errors were calculated by bootstrapping the classifier votes for each galaxy and re-calculating the fractional contributions of each type; errors were taken as the $1\sigma$ dispersion in the fractions. The total error, represented by the shaded regions, is the statistical and systematic errors added in quadrature.} 
 \label{fig:f_results}
 \end{figure*}
 
@@ -234,7 +220,7 @@ Given the large errors on some of the fractions (particularly for $f_{D|R}$), we
 
 The downward trend we observe in the red sequence disc fraction $f_{D|R}$ for massive galaxies is in agreement with \citet{Bundy2010} (hereafter B10) who perform a similar analysis of the morphological makeup of the red sequence. As stated previously, a downward trend of $f_{D|R}$ represents either a depletion of the total pool of red discs (via a transformation to elliptical), but could also be an indication of an increase in the pool of red ellipticals (which could result from blue or red discs transforming morphology). In contrast, an upward trend is only possible via a pile-up of red discs, which is what we observe for the lower mass bins, and is in disagreement with B10. At the lowest redshift bin ($z\sim0.3$), we measure similar absolute fractions of discs occupying the red sequence for all masses. However, B10 find the contribution of low mass galaxies to increase at higher lookback time to $z=1$, while we find a decreasing contribution. 
 
-The fact that our results agree for the highest mass at all redshifts, but only at the lowest redshift for lower masses, suggests the differences may be attributed in biases in morphological classification. B10 segregates early and late-type disc galaxies using ZEST \citep{Scarlata2007} morphologies, which they acknowledge are biased towards disc classification for faint apparent magnitudes, which tend to be associated with the lowest mass, highest redshift objects. This bias could influence their observed increase in red sequence discs toward $z=1$ for low masses. Conversely, GZ classifications tend to be biased towards elliptical morphologies at fainter magnitudes. Our attempt to quantify and correct for this effect is described in Section~\ref{ssec:ferengi}, but an underestimation of our correction function may have driven the apparently decreasing abundance of disc galaxies observed at increasing redshift for low masses. However, it has been shown that red disc galaxies in the local Universe tend to be more massive, as in \citet{Masters2011}. If this is true at all epochs, we would not expect such a significant contribution by red discs to the low-mass galaxy population as found in B10.
+The fact that our results agree for the highest mass at all redshifts, but only at the lowest redshift for lower masses, suggests the differences may be attributed in biases in morphological classification. B10 segregates early and late-type disc galaxies using ZEST \citep{Scarlata2007} morphologies, which they acknowledge are biased towards disc classification for faint apparent magnitudes, which tend to be associated with the lowest mass, highest redshift objects. This bias could influence their observed increase in red sequence discs toward $z=1$ for low masses. Conversely, GZ classifications tend to be biased towards elliptical morphologies at fainter magnitudes. Our attempt to quantify and correct for this effect is described in Section~\ref{ssec:ferengi}, but an underestimation of our correction function may have driven the apparently decreasing abundance of disc galaxies observed at increasing redshift for low masses. However, it has been shown that red disc galaxies in the local Universe tend to be more massive, as in \citet{Masters2010}. If this is true at all epochs, we would not expect such a significant contribution by red discs to the low-mass galaxy population as found in B10.
 
 \section{Discussion}
 \label{sec:discussion}
@@ -272,7 +258,7 @@ Our results suggests that Path B, the morphological transformation of red discs,
  
 
 \subsubsection{Limiting case 3: Path C only}
-We now consider the scenario in which blue disc galaxies only quench via processes which simutaneously destroy their discs. The most extreme consequence of this scenario is of course a complete absence of red disc galaxies, which would give $f_{R|D}=f_{D|R}=0$ for all redshifts. Allowing for an initial population of red discs, we can explore how $f_{R|D}$ and $f_{D|R}$ would evolve if Path C were to suddeny become the only option. 
+We now consider the scenario in which blue disc galaxies only quench via processes which simutaneously destroy their discs. The most extreme consequence of this scenario is of course a complete absence of red disc galaxies, which would give $f_{R|D}=f_{D|R}=0$ for all redshifts. Allowing for an initial population of red discs, we can explore how $f_{R|D}$ and $f_{D|R}$ would evolve if Path C were to suddenly become the only option. 
 
 The evolution of $f_{R|D}$ is dependent on the growth/depletion of red and blue discs. In this scenario red discs are not building up, nor are they transforming morphologically; therefore their number remains constant, and the evolution of $f_{R|D}$ is solely dependent on the blue discs. If blue discs only evolve via path C, their number could only decrease, leading to an overall increase of $f_{R|D}$. 
 $f_{D|R}$ in this scenario is only affected by the net change of red ellipticals, whose numbers are increasing via Path C. Therefore this scenario would give a decrease of $f_{D|R}$.% However, it is also possible for red ellipticals to merge and grow in mass, causing them to leave or enter a given mass bin. Thus a net increase or decrease in the number of ellipticals will depend on the relative rate of Path C and the merger rate at each mass. 
@@ -337,7 +323,7 @@ A summary of the above breakdown is as follows: Path B, the depletion of red dis
 
 \subsection{Looking forward: developing a model to reproduce observations}
 
-Through observations of the evolution of the red disc population since $z=1$, we have deduced that massive galaxies are more likely to both enter a red disc phase and subsequently exit the stage via a morphological transformation, while low mass discs which enter a passive stage are more likely to remain in that phase than continue their evolution. To quantify and verify this interpretation would require further work, such as a semi-analytical model which could reproduce these observations given parameters describing the rate of occurrences of the different evolutionary pathways shown in Figure~\ref{fig:cartoon}. A complete model is beyond the scope of this work, but an example of a simple toy-model approach is given in Appendix A. Our simple model was not able to constrain values for all parameters implemented, but it did detect a mass-dependence on the rate at which blue discs transform to red discs, which agrees with our interpretations thus far. 
+Through observations of the evolution of the red disc population since $z=1$, we have deduced that massive galaxies are more likely to both enter a red disc phase and subsequently exit the stage via a morphological transformation, while low mass discs which enter a passive stage are more likely to remain in that phase than continue their evolution. To quantify and verify this interpretation would require further work, such as a semi-analytical model which could reproduce these observations given parameters describing the rate of occurrences of the different evolutionary pathways shown in Figure~\ref{fig:cartoon}. A complete model is beyond the scope of this work, but an example of a simple toy-model approach is given in Appendix~\ref{appx:toymodel}. Our simple model was not able to constrain values for all parameters implemented, but it did detect a mass-dependence on the rate at which blue discs transform to red discs, which agrees with our interpretations thus far. 
 
 
 \section{Conclusions}
@@ -361,11 +347,13 @@ We have investigated the population of passive disc galaxies across a range of s
 %%%%%%%%%%%%
 %%% ACKNOWLEDGMENTS
 %%%%%%%%%%%%
+
+\section*{Acknowledgements}
 The data in this paper are the result of the efforts of the Galaxy~Zoo~Hubble volunteers, without whom none of this work would be possible. Their efforts are individually acknowledged at \url{authors.galaxyzoo.org}. Please contact the author(s) to request access to research materials discussed in this paper. 
 
 
 MG, CS, MB, and LF gratefully acknowledge support from the US National
-Science Foundation Grant AST1413610.
+Science Foundation Grant AST1413610. RS gratefully acknowledges funding from the Ogden Trust. 
 
 This publication makes use of data products from the Two Micron All Sky Survey, which is a joint project of the University of Massachusetts and the Infrared Processing and Analysis Center/California Institute of Technology, funded by the National Aeronautics and Space Administration and the National Science Foundation.
 
@@ -402,6 +390,7 @@ the University of Washington.
 \appendix
 
 \section{Toy-model approach to constrain rates of different evolutionary pathways}
+\label{appx:toymodel}
 
 Our observations of the fractional evolution of different morphological and activity types of galaxies since $z=1$ are well-suited for the implementation of a model to constrain the frequencies of different evolutionary pathways. Here we present a toy model designed to reproduce our observations, given different sets of input parameters. This pilot study is expected to initiate further development of a sophisticated, semi-analytic model to describe and constrain potential rates of quenching and morphological evolution. 
 
@@ -453,5 +442,134 @@ We find a strong mass dependence on the fraction of blue galaxies to quench to r
 
 
 
+\section{Data Tables}
+\label{appx:datatables}
+Here we provide the raw and corrected counts of four morphology/colour types of galaxies: red discs, blue discs, red ellipticals, and blue ellipticals. Counts are divided into four tables representing data for the four mass bins used in Figures~\ref{fig:all_plot} and ~\ref{fig:f_results}. In each table, the counts are further subdivided into four redshift bins corresponding to the bins used in the same figures, and the redshift displayed is the central redshift value of the bins. Corrected counts are derived for each redshift interval using $\xi_D(z)$ for discs and $\xi_E(z)$ for ellipticals, as explained in Section~\ref{sec:correction}. Errors for the raw numbers represent multinomial counting errors, while errors on the corrected numbers are multinomial counting errors propagated with the errors associated with the fits for $\xi_D$ and $\xi_E$.  
+
+\begin{table}
+%\begin{center}
+\begin{tabular}{lrrrr}
+\hline
+\hline
+\multicolumn{5}{c}{$10.1<\rm \log(M/M_{\odot})<10.4$}\\
+\hline
+\hline
+\multicolumn{1}{l}{redshift} & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.54} & \multicolumn{1}{c}{0.76} & \multicolumn{1}{c}{0.99} \\
+%redshift            & 0.31            & 0.54            & 0.76           & 0.99           \\
+\hline
+$\rm N_{RD}$        & 66 $\pm 8$      & 23 $\pm 5$      & 36 $\pm 6$     & 17 $\pm 4$     \\
+$\rm N^{'}_{RD}$    & 66 $\pm 8$      & 30 $\pm 6$      & 65 $\pm 11$    & 51 $\pm 14$    \\
+$\rm N_{BD}$        & 411 $\pm 14$    & 445 $\pm 16$    & 754 $\pm 22$   & 629 $\pm 18$   \\
+$\rm N^{'}_{BD}$    & 416 $\pm 17$    & 582 $\pm 30$    & 1368 $\pm 96$  & 1920 $\pm 266$ \\
+$\rm N_{RE}$        & 197 $\pm 12$    & 262 $\pm 14$    & 561 $\pm 20$   & 213 $\pm 13$   \\
+$\rm N^{'}_{RE}$    & 141 $\pm 9$     & 178 $\pm 10$    & 365 $\pm 13$   & 132 $\pm 8$    \\
+$\rm N_{BE}$        & 148 $\pm 11$    & 394 $\pm 16$    & 665 $\pm 21$   & 504 $\pm 18$   \\
+$\rm N^{'}_{BE}$    & 106 $\pm 8$     & 269 $\pm 11$    & 433 $\pm 14$   & 312 $\pm 12$    \\
+\hline
+$\rm N_{total}$     & 822 $\pm 23$    & 1124 $\pm 27$   & 2016 $\pm 37$  & 1363 $\pm 29$   \\
+$\rm N^{'}_{total}$ & 731 $\pm 22$    & 1060 $\pm 34$   & 2232 $\pm 99$  & 2418 $\pm 266$   \\
+\hline
+\hline
+\end{tabular}
+\caption{Raw (unprimed) and corrected (primed) number counts of four morphology/colour categories in four redshift bins for galaxies with stellar masses within $\rm 10.1< \log(M/M_{\odot})<10.4$. }
+\label{tab:counts_table}
+%\end{center}
+\end{table}
+
+
+
+\begin{table}
+%\begin{center}
+\begin{tabular}{lrrrr}
+\hline
+\hline
+\multicolumn{5}{c}{$10.4<\rm \log(M/M_{\odot})<10.7$}\\
+\hline
+\hline
+\multicolumn{1}{l}{redshift} & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.54} & \multicolumn{1}{c}{0.76} & \multicolumn{1}{c}{0.99} \\
+%redshift            & 0.31            & 0.54            & 0.76           & 0.99           \\
+\hline
+$\rm N_{RD}$        & 76 $\pm 8$      & 46 $\pm 7$      & 83 $\pm 9$     & 44 $\pm 7$     \\
+$\rm N^{'}_{RD}$    & 76 $\pm 8$      & 60 $\pm 9$      & 150 $\pm 19$   & 134 $\pm 27$    \\
+$\rm N_{BD}$        & 351 $\pm 13$    & 381 $\pm 15$    & 611 $\pm 21$   & 470 $\pm 18$   \\
+$\rm N^{'}_{BD}$    & 355 $\pm 15$    & 498 $\pm 26$    & 1109 $\pm 81$  & 1434 $\pm 201$ \\
+$\rm N_{RE}$        & 186 $\pm 12$    & 272 $\pm 14$    & 799 $\pm 22$   & 530 $\pm 18$   \\
+$\rm N^{'}_{RE}$    & 133 $\pm 8$     & 185 $\pm 9$     & 520 $\pm 15$   & 329 $\pm 12$    \\
+$\rm N_{BE}$        & 68  $\pm 12$    & 186 $\pm 12$    & 537 $\pm 20$   & 359 $\pm 16$   \\
+$\rm N^{'}_{BE}$    & 48  $\pm 6$     & 127 $\pm 8$     & 349 $\pm 13$   & 222 $\pm 10$    \\
+\hline
+$\rm N_{total}$     & 681 $\pm 21$    & 885 $\pm 24$    & 2030 $\pm 37$  & 1403 $\pm 31$   \\
+$\rm N^{'}_{total}$ & 615 $\pm 20$    & 871 $\pm 31$    & 2130 $\pm 85$  & 2121 $\pm 204$   \\
+\hline
+\hline
+\end{tabular}
+\caption{Raw (unprimed) and corrected (primed) number counts of four morphology/colour categories in four redshift bins for galaxies with stellar masses within $\rm 10.4< \log(M/M_{\odot})<10.7$. }
+\label{tab:counts_table}
+%\end{center}
+\end{table}
+
+
+
+\begin{table}
+%\begin{center}
+\begin{tabular}{lrrrr}
+\hline
+\hline
+\multicolumn{5}{c}{$10.7<\rm \log(M/M_{\odot})<11.0$}\\
+\hline
+\hline
+\multicolumn{1}{l}{redshift} & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.54} & \multicolumn{1}{c}{0.76} & \multicolumn{1}{c}{0.99} \\
+%redshift            & 0.31            & 0.54            & 0.76           & 0.99           \\
+\hline
+$\rm N_{RD}$        & 53 $\pm 7$      & 40 $\pm 6$      & 118 $\pm 10$     & 78 $\pm 9$     \\
+$\rm N^{'}_{RD}$    & 53 $\pm 7$      & 52 $\pm 8$      & 214 $\pm 23$     & 238 $\pm 41$    \\
+$\rm N_{BD}$        & 222 $\pm 10$    & 265 $\pm 12$    & 396 $\pm 17$     & 287 $\pm 15$   \\
+$\rm N^{'}_{BD}$    & 224 $\pm 12$    & 346 $\pm 20$    & 718 $\pm 56$     & 876 $\pm 127$ \\
+$\rm N_{RE}$        & 128 $\pm 10$    & 175 $\pm 11$    & 680 $\pm 19$     & 602 $\pm 17$   \\
+$\rm N^{'}_{RE}$    & 92 $\pm 7$      & 119 $\pm 8$     & 442 $\pm 13$     & 373 $\pm 11$    \\
+$\rm N_{BE}$        & 38 $\pm 6$      & 86 $\pm 9$      & 254 $\pm 14$     & 228 $\pm 14$   \\
+$\rm N^{'}_{BE}$    & 27 $\pm 4$      & 58 $\pm 6$      & 165 $\pm 10$     & 141 $\pm 9$    \\
+\hline
+$\rm N_{total}$     & 441 $\pm 17$    & 566 $\pm 19$   & 1448 $\pm 31$  & 1195 $\pm 28$   \\
+$\rm N^{'}_{total}$ & 398 $\pm 16$    & 577 $\pm 24$   & 1541 $\pm 62$  & 1630 $\pm 134$   \\
+\hline
+\hline
+\end{tabular}
+\caption{Raw (unprimed) and corrected (primed) number counts of four morphology/colour categories in four redshift bins for galaxies with stellar masses within $\rm 10.7< \log(M/M_{\odot})<11.0$. }
+\label{tab:counts_table}
+%\end{center}
+\end{table}
+
+
+
+\begin{table}
+%\begin{center}
+\begin{tabular}{lrrrr}
+\hline
+\hline
+\multicolumn{5}{c}{$11.0<\rm \log(M/M_{\odot})<11.3$}\\
+\hline
+\hline
+\multicolumn{1}{l}{redshift} & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.54} & \multicolumn{1}{c}{0.76} & \multicolumn{1}{c}{0.99} \\
+%redshift            & 0.31            & 0.54            & 0.76           & 0.99           \\
+\hline
+$\rm N_{RD}$        & 29 $\pm 5$    & 33 $\pm 5$    & 89 $\pm 9$    & 71 $\pm 8$     \\
+$\rm N^{'}_{RD}$    & 29 $\pm 5$    & 43 $\pm 7$    & 161 $\pm 19$  & 216 $\pm 38$    \\
+$\rm N_{BD}$        & 73 $\pm 7$    & 97 $\pm 8$    & 151 $\pm 11$  & 126 $\pm 10$   \\
+$\rm N^{'}_{BD}$    & 73 $\pm 7$    & 126 $\pm 11$  & 274 $\pm 26$  & 384 $\pm 60$ \\
+$\rm N_{RE}$        & 74 $\pm 7$    & 109 $\pm 8$   & 343 $\pm 13$  & 319 $\pm 12$   \\
+$\rm N^{'}_{RE}$    & 53 $\pm 5$    & 74 $\pm 5$    & 223 $\pm 8$   & 198 $\pm 8$    \\
+$\rm N_{BE}$        & 7  $\pm 3$    & 17 $\pm 4$    & 64 $\pm 8$    & 63 $\pm 7$   \\
+$\rm N^{'}_{BE}$    & 5  $\pm 2$    & 11 $\pm 3$    & 41 $\pm 5$    & 39 $\pm 5$    \\
+\hline
+$\rm N_{total}$     & 183 $\pm 11$    & 256 $\pm 13$   & 647 $\pm 20$  & 579 $\pm 19$   \\
+$\rm N^{'}_{total}$ & 162 $\pm 10$    & 256 $\pm 15$   & 701 $\pm 34$  & 839 $\pm 72$   \\
+\hline
+\hline
+\end{tabular}
+\caption{Raw (unprimed) and corrected (primed) number counts of four morphology/colour categories in four redshift bins for galaxies with stellar masses within $\rm 11.0< \log(M/M_{\odot})<11.3$. }
+\label{tab:counts_table}
+%\end{center}
+\end{table}
 
 \end{document}
